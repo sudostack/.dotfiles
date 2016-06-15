@@ -242,11 +242,12 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup 'trailing
+   avy-all-windows nil
    indent-tabs-mode nil
    line-spacing 0.5
    require-final-newline t
    tab-stop-list 8
-   tab-width 2
+   ;; tab-width 2
    ))
 
 (defun dotspacemacs/user-init ()
