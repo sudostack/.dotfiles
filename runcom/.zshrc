@@ -75,6 +75,7 @@ export PATH="/usr/local/bin:$PATH:/usr/local/git/bin:$PATH:$homebrew:$PATH:/usr/
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR="emacsclient -c"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -95,6 +96,8 @@ alias desk='cd ~/Desktop'
 alias dev='cd ~/Dropbox/dev'
 alias js='cd ~/Dropbox/JavaScript'
 alias ls='ls -Gp'
+# Make sure we start an Emacs server to listen first, `$ emacs --daemon`
+alias emacsc="emacsclient -c"
 
 # Powerline-ZSH
 function _update_ps1()
