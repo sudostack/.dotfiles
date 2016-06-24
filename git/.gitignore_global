@@ -1,0 +1,6 @@
+.DS_Store
+.tags
+.tags_sorted_by_file
+/Users/davidwu/Desktop/therealreal/config/environments/development.rb
+node_modules/
+public/assets/

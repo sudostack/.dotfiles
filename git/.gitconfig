@@ -1,0 +1,11 @@
+[user]
+	email = dwu207@gmail.com
+	name = David Wu (sudostack)
+[grep]
+	lineNumber = true
+[alias]
+	g = grep --break --heading --line-number
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/davidwu/.gitignore_global
