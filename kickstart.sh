@@ -30,6 +30,7 @@ echo "Moving any existing dotfiles from ~ to $backup_dir"
 for file in $files
 do
     mv ~/$file ~/.dotfiles_bk/
+    echo "Creating symlink to $file in home directory...\n"
+    ln -sfv $dir/$file ~
     echo "Creating symlink to $file in home directory."
-    ln -sfv $dir/$file ~/
 done
