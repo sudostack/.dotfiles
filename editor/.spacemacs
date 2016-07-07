@@ -27,6 +27,7 @@ values."
      ;; better-defaults
      colors
      elixir
+     elm
      erlang
      emacs-lisp
      git
@@ -35,6 +36,7 @@ values."
      markdown
      org
      osx
+     python
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -246,8 +248,8 @@ values."
    indent-tabs-mode nil
    line-spacing 0.5
    require-final-newline t
-   tab-stop-list 8
-   ;; tab-width 2
+   tab-stop-list 4
+   tab-width 2
    ))
 
 (defun dotspacemacs/user-init ()
@@ -270,3 +272,37 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(css-indent-offset 2)
+ '(elm-indent-look-past-empty-line t)
+ '(elm-indent-offset 2)
+ '(helm-always-two-windows t)
+ '(helm-bookmark-show-location t)
+ '(helm-buffers-fuzzy-matching t)
+ '(helm-descbinds-mode t)
+ '(helm-descbinds-window-style (quote split))
+ '(helm-display-function (quote spacemacs//display-helm-window))
+ '(helm-display-header-line nil)
+ '(helm-echo-input-in-header-line t)
+ '(helm-file-cache-fuzzy-match t)
+ '(helm-flx-for-helm-find-files nil)
+ '(helm-flx-mode t)
+ '(helm-fuzzy-matching-highlight-fn (quote helm-flx-fuzzy-highlight-match))
+ '(helm-fuzzy-sort-fn (quote helm-flx-fuzzy-matching-sort))
+ '(helm-locate-command "mdfind -name %s %s")
+ '(helm-mode t)
+ '(helm-recentf-fuzzy-match t)
+ '(helm-split-window-in-side-p t)
+ '(spaceline-helm-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:background nil))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
