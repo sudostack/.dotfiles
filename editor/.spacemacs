@@ -247,8 +247,9 @@ values."
    avy-all-windows nil
    indent-tabs-mode nil
    line-spacing 0.5
+   js2-basic-offset 2
+   js2-indent-level 2
    require-final-newline t
-   tab-stop-list 4
    tab-width 2
    ))
 
