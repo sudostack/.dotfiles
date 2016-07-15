@@ -73,7 +73,7 @@ export PATH="/Users/davidwu/.rbenv/shims:/usr/local/Cellar:/usr/local/bin:/usr/b
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR="emacsclient -c"
+  export EDITOR='vim'
 fi
 
 # Compilation flags
