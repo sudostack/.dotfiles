@@ -107,3 +107,7 @@ export V1_BASE_URL='http://localhost:3001'
 export GOPATH=~/go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:$GOPATH/bin
+
+# asdf (Elixir, Erlang version manager)
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
