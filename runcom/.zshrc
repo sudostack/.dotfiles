@@ -59,7 +59,11 @@ source $ZSH/oh-my-zsh.sh
 HOMEBREW=/usr/local/bin:/usr/local/sbin
 
 # User configuration
-export PATH="/usr/local/Cellar:$HOMEBREW:/usr/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin"
+if [ `whoami` = 'davidwu' ] && [ `hostname` = 'sudostackMBP.local' ]; then
+  export PATH="/usr/local/Cellar:$HOMEBREW:/Users/davidwu/.rbenv/shims:/usr/bin:/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin:/Users/dwu/bin:/Users/davidwu/.node/bin:$NODE_PATH"
+elif [ `whoami` = 'dwu' ] && [ `hostname` = 'sudostackMBA.local' ]; then
+  export PATH="/usr/local/Cellar:$HOMEBREW:/usr/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin"
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -87,13 +91,16 @@ alias desk='cd ~/Desktop'
 alias ls='ls -Gp'
 alias emacsc="emacsclient -c"
 
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-
 eval "$(direnv hook zsh)"
 
-# Node
-export NODE_MODULES=./node_modules/.bin
+# Lunchy
+LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
+if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
+  . $LUNCHY_DIR/lunchy-completion.zsh
+fi
 
 # asdf (Elixir, Erlang version manager)
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
