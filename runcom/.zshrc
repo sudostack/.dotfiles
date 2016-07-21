@@ -12,9 +12,6 @@ precmd()
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Node
-export NODE_MODULES=./node_modules/.bin
-
 ZSH_THEME="miloshadzic"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -59,10 +56,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-homebrew=/usr/local/bin:/usr/local/sbin
+HOMEBREW=/usr/local/bin:/usr/local/sbin
+
 # User configuration
-# export PATH="/usr/local/bin:$PATH:/usr/local/git/bin:$PATH:$homebrew:$PATH:/usr/local/bin:/usr/bin:/usr/local/git/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:dirname which python:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin:/Users/dwu/bin:$HOME/.rvm/bin:$NODE_MODULES"
-export PATH="/Users/davidwu/.rbenv/shims:/usr/local/Cellar:/usr/local/bin:/usr/bin:/bin:/usr/local/git/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:dirname which python:/opt/local/bin:/usr/local/sbin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin:/Users/dwu/bin:/Users/davidwu/.node/bin:$NODE_PATH"
+export PATH="/usr/local/Cellar:$HOMEBREW:/usr/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -90,23 +87,12 @@ alias desk='cd ~/Desktop'
 alias ls='ls -Gp'
 alias emacsc="emacsclient -c"
 
-# lunchy
-LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
-if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
-  . $LUNCHY_DIR/lunchy-completion.zsh
-fi
-
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-# TRR
-export RAILS_DEBUG_ASSETS=false
-export TRR_API_URL='http://localhost:8080'
-export V1_BASE_URL='http://localhost:3001'
+eval "$(direnv hook zsh)"
 
-# Go
-export GOPATH=~/go
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export PATH=$PATH:$GOPATH/bin
+# Node
+export NODE_MODULES=./node_modules/.bin
 
 # asdf (Elixir, Erlang version manager)
 . $HOME/.asdf/asdf.sh
