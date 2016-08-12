@@ -61,6 +61,12 @@ HOMEBREW=/usr/local/bin:/usr/local/sbin
 # User configuration
 if [ `whoami` = 'davidwu' ] && [ `hostname` = 'sudostackMBP.local' ]; then
   export PATH="/usr/local/Cellar:$HOMEBREW:/Users/davidwu/.rbenv/shims:/usr/bin:/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin:/Users/dwu/bin:/Users/davidwu/.node/bin:$NODE_PATH"
+
+  # Lunchy
+  LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
+  if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
+    . $LUNCHY_DIR/lunchy-completion.zsh
+  fi
 elif [ `whoami` = 'dwu' ] && [ `hostname` = 'sudostackMBA.local' ]; then
   export PATH="/usr/local/Cellar:$HOMEBREW:/usr/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin"
 fi
@@ -92,12 +98,6 @@ alias ls='ls -Gp'
 alias emacsc="emacsclient -c"
 
 eval "$(direnv hook zsh)"
-
-# Lunchy
-LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
-if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
-  . $LUNCHY_DIR/lunchy-completion.zsh
-fi
 
 # asdf (Elixir, Erlang version manager)
 . $HOME/.asdf/asdf.sh
