@@ -41,6 +41,7 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
+     react
      ruby
      syntax-checking
      themes-megapack
@@ -245,13 +246,24 @@ values."
    ;; (default nil)
    dotspacemacs-whitespace-cleanup 'trailing
    avy-all-windows nil
+   css-indent-offset 2
    indent-tabs-mode nil
    line-spacing 0.5
    js2-basic-offset 2
    js2-indent-level 2
    require-final-newline t
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2
    tab-width 2
    ))
+
+;; 2 space indentation for element attrs, concats, and contiguous calls
+(with-eval-after-load 'web-mode
+  (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+  (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+  (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
