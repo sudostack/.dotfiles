@@ -31,6 +31,7 @@ values."
      erlang
      emacs-lisp
      git
+     gtags
      html
      javascript
      markdown
