@@ -1,18 +1,20 @@
 # Powerline-ZSH
-function powerline_prompt()
-{
-    export PROMPT="$(~/.dotfiles/powerline-zsh/powerline-zsh.py --cwd-only -m konsole $?)"
-}
+# function powerline_prompt()
+# {
+#     export PROMPT="$(~/.dotfiles/powerline-zsh/powerline-zsh.py --cwd-only -m konsole $?)"
+# }
 
-precmd()
-{
-    powerline_prompt
-}
+# precmd()
+# {
+#     powerline_prompt
+# }
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="miloshadzic"
+# ZSH_THEME="miloshadzic"
+ZSH_THEME="nanotech"
+# ZSH_THEME="wezm"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
