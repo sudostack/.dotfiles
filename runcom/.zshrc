@@ -69,7 +69,7 @@ if [ `whoami` = 'davidwu' ] && [ `hostname` = 'sudostackMBP.local' ]; then
   if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
     . $LUNCHY_DIR/lunchy-completion.zsh
   fi
-elif [ `whoami` = 'dwu' ] && [ `hostname` = 'sudostackMBA.local' ]; then
+elif [ `whoami` = 'dwu' ] && [ `hostname` = 'sudostackMBA' ]; then
   export PATH="/usr/local/Cellar:$HOMEBREW:/usr/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin"
 fi
 
