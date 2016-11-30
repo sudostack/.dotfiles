@@ -51,7 +51,7 @@ zstyle ':completion:*:default' list-colors ''
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/.dotfiles/zsh
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
@@ -59,19 +59,12 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 HOMEBREW=/usr/local/bin:/usr/local/sbin
+NODEPATH=/Users/davidwu/.asdf/shims/node
+YARN=$HOME/.yarn/bin
 
 # User configuration
-if [ `whoami` = 'davidwu' ] && [ `hostname` = 'sudostackMBP.local' ]; then
-  export PATH="/usr/local/Cellar:$HOMEBREW:/Users/davidwu/.rbenv/shims:/usr/bin:/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin:/Users/dwu/bin:/Users/davidwu/.node/bin:$NODE_PATH"
-
-  # Lunchy
-  LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
-  if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
-    . $LUNCHY_DIR/lunchy-completion.zsh
-  fi
-elif [ `whoami` = 'dwu' ] && [ `hostname` = 'sudostackMBA' ]; then
-  export PATH="/usr/local/Cellar:$HOMEBREW:/usr/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/Users/dwu/bin"
-fi
+# if [ `whoami` = 'davidwu' ] && [ `hostname` = 'sudostackMBP' ]; then
+export PATH="/usr/local/Cellar:$HOMEBREW:$HOME/.rbenv/shims:/usr/bin:/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/bin:$HOME/.node/bin:$NODE_PATH:$YARN"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -95,9 +88,6 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias desk='cd ~/Desktop'
-alias ls='ls -Gp'
-alias emacsc="emacsclient -c"
 
 eval "$(direnv hook zsh)"
 
