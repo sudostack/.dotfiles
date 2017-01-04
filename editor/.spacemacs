@@ -266,6 +266,14 @@ values."
   (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
   (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
 
+;; disable smart-parens for specific pairs but still keep package around
+(eval-after-load 'smartparens
+  '(progn
+     (sp-pair "(" nil :actions :rem)
+     (sp-pair "[" nil :actions :rem)
+     (sp-pair "'" nil :actions :rem)
+     (sp-pair "\"" nil :actions :rem)))
+
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
