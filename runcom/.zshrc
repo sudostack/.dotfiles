@@ -12,9 +12,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Pure
+autoload -U promptinit; promptinit
+# prompt pure
+
 # ZSH_THEME="miloshadzic"
-ZSH_THEME="nanotech"
+# ZSH_THEME="nanotech"
 # ZSH_THEME="wezm"
+ZSH_THEME="pure"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -89,10 +94,11 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-eval "$(direnv hook zsh)"
-
 # asdf (Elixir, Erlang version manager)
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# Gitignore.io
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+eval "$(direnv hook zsh)"
