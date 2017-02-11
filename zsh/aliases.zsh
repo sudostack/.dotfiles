@@ -1,6 +1,7 @@
 alias desk='cd ~/Desktop'
 alias ls='ls -Gp'
-alias emacsc="emacsclient -c"
+alias emacsc='emacsclient -c'
+alias whatsmyip='curl ipinfo.io/ip'
 
 # Git
 alias grecent='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort'
