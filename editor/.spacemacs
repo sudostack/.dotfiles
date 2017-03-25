@@ -38,7 +38,7 @@ values."
      markdown
      org
      osx
-     python
+     ;; python
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -330,3 +330,52 @@ you should place your code here."
  '(default ((t (:background nil))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(clean-aindent-mode t)
+ '(css-indent-offset 2 t)
+ '(elm-indent-look-past-empty-line t)
+ '(elm-indent-offset 2)
+ '(helm-always-two-windows t)
+ '(helm-bookmark-show-location t)
+ '(helm-buffers-fuzzy-matching t)
+ '(helm-descbinds-mode t)
+ '(helm-descbinds-window-style (quote split))
+ '(helm-display-function (quote spacemacs//display-helm-window))
+ '(helm-display-header-line nil)
+ '(helm-echo-input-in-header-line t)
+ '(helm-file-cache-fuzzy-match t)
+ '(helm-flx-for-helm-find-files nil)
+ '(helm-flx-mode t)
+ '(helm-fuzzy-matching-highlight-fn (quote helm-flx-fuzzy-highlight-match))
+ '(helm-fuzzy-sort-fn (quote helm-flx-fuzzy-matching-sort))
+ '(helm-locate-command "mdfind -name %s %s")
+ '(helm-mode t)
+ '(helm-recentf-fuzzy-match t)
+ '(helm-split-window-in-side-p t)
+ '(indent-tabs-mode nil)
+ '(js-indent-level 2)
+ '(neo-auto-indent-point t)
+ '(spaceline-helm-mode t)
+ '(tab-always-indent (quote complete))
+ '(web-mode-attr-indent-offset 2)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-css-indent-offset 2)
+ '(web-mode-markup-indent-offset 2))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:background nil))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+)
