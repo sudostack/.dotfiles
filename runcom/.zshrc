@@ -83,6 +83,9 @@ else
   export EDITOR='vim'
 fi
 
+# Emacs
+export ALTERNATE_EDITOR=""
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
