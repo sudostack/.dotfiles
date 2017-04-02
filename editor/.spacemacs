@@ -45,6 +45,7 @@ values."
      ;; spell-checking
      react
      ruby
+     scala
      syntax-checking
      themes-megapack
      version-control
@@ -53,7 +54,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(sql-indent)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -108,9 +109,9 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         jbeans
+   dotspacemacs-themes '(jbeans
                          ujelly
+                         spacemacs-dark
                          twilight-anti-bright
                          spacemacs-dark
                          spacemacs-light
@@ -268,6 +269,10 @@ values."
   (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
   (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
 
+;; sql-indent
+(eval-after-load "sql"
+  '(load-library "sql-indent"))
+
 ;; disable smart-parens for specific pairs but still keep package around
 ;; (eval-after-load 'smartparens
 ;;   '(progn
@@ -301,7 +306,7 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(css-indent-offset 2)
+ '(css-indent-offset 2 t)
  '(elm-indent-look-past-empty-line t)
  '(elm-indent-offset 2)
  '(helm-always-two-windows t)
@@ -321,6 +326,7 @@ you should place your code here."
  '(helm-mode t)
  '(helm-recentf-fuzzy-match t)
  '(helm-split-window-in-side-p t)
+ '(js-indent-level 2)
  '(spaceline-helm-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
