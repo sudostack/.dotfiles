@@ -105,3 +105,6 @@ export ALTERNATE_EDITOR=""
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 eval "$(direnv hook zsh)"
+
+# Fzf
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
