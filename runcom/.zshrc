@@ -80,7 +80,7 @@ export PATH="/usr/local/Cellar:$HOMEBREW:$HOME/.rbenv/shims:/usr/local/bin:/usr/
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # Emacs
