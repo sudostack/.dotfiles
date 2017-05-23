@@ -42,7 +42,7 @@ let g:airline_powerline_fonts=1
 
 set background=dark
 set clipboard=unnamed " Copy to system clipboard
-set colorcolumn=80 " Highlight chars exceeding 80 columns
+"set colorcolumn=80 " Highlight chars exceeding 80 columns
 set cursorline " Highlight cursor position (row/line)
 set cursorcolumn " Highlight cursor position (col)
 set encoding=utf-8
