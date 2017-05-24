@@ -55,6 +55,7 @@ set ignorecase " Case-insensitive searches
 set lazyredraw " Aid in slow redrawing because of 'cursorline'
 set linespace=1 " Line spacing
 set noerrorbells " No beeps
+"set nohlsearch " No highlight when searching
 set nojoinspaces " Prevents insertion of two spaces after punctuation on line join (J)
 set noswapfile " Don't make backups before overwriting
 set number " Always show line numbers
@@ -76,8 +77,8 @@ colorscheme gruvbox
 
 " ----- KEY MAPPINGS ---
 
-" Fix <C-c> escape doesn't trigger `InsertLeave` event
-inoremap <C-c> <Esc>
+" Fix (deoplete) <C-c> escape doesn't trigger `InsertLeave` event
+"inoremap <C-c> <Esc>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -95,3 +96,6 @@ nmap <Leader>ffy :let @*=expand("%:p") <bar> :echo @*<CR>
 nmap <Leader>pf :FZF<CR>
 " Ag (Silver Searcher)
 nmap <Leader>/ :Ag!<SPACE>
+
+" Searching
+"nmap <C-c> :noh<CR>
