@@ -94,4 +94,4 @@ nmap <Leader>ffy :let @*=expand("%:p") <bar> :echo @*<CR>
 " Fuzzy finder
 nmap <Leader>pf :FZF<CR>
 " Ag (Silver Searcher)
-nmap <Leader>/ :Ag<SPACE>
+nmap <Leader>/ :Ag!<SPACE>
