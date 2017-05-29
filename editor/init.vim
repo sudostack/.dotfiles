@@ -28,6 +28,7 @@ call plug#begin('~/.config/nvim/plugged')
     inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
   Plug 'slashmili/alchemist.vim' " Elixir integration
     let g:alchemist_tag_disable = 1
+  Plug 'tpope/vim-fugitive' " Git
 
 call plug#end()
 
