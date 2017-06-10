@@ -99,5 +99,7 @@ nmap <Leader>pf :FZF<CR>
 " Ag (Silver Searcher)
 nmap <Leader>/ :Ag!<SPACE>
 
-" Searching
-"nmap <C-c> :noh<CR>
+" Search for word under cursor
+"noremap <leader>/ :Ag! -Q <C-r>=expand('<cword>')<CR><CR>
+" Search for word under visual selection
+vnoremap <Leader>/ y:Ag! <C-r>=fnameescape(@")<CR><CR>
