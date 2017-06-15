@@ -80,7 +80,8 @@ colorscheme gruvbox
 " ----- KEY MAPPINGS ---
 
 " Fix (deoplete) <C-c> escape doesn't trigger `InsertLeave` event
-"inoremap <C-c> <Esc>
+" Still need this because `dd` is deleting two lines now
+inoremap <C-c> <Esc>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
