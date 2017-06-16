@@ -56,6 +56,7 @@ set incsearch " Incremental highlighting while searching
 set ignorecase " Case-insensitive searches
 set lazyredraw " Aid in slow redrawing because of 'cursorline'
 set linespace=1 " Line spacing
+set mouse=a " Allow mouse usage in all modes
 set noerrorbells " No beeps
 "set nohlsearch " No highlight when searching
 set nojoinspaces " Prevents insertion of two spaces after punctuation on line join (J)
