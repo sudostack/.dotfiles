@@ -41,7 +41,7 @@ let mapleader=' '
 " Airline
 let g:airline_powerline_fonts=1
 
-"set autoread
+set autoread
 set background=dark
 set clipboard=unnamed " Copy to system clipboard
 "set colorcolumn=80 " Highlight chars exceeding 80 columns
