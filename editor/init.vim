@@ -69,7 +69,7 @@ set showcmd                 " Show (partial) command in status line
 set showmatch               " Show matching brackets
 set smartcase               " Searching with capital letters
 set softtabstop=2
-set tabstop=2               " Render TABs using n number of spaces
+"set tabstop=2 " Render TABs using n number of spaces
 set termguicolors
 set title                   " Set the title of the iTerm tab
 set t_Co=256                " Moar colors
@@ -105,3 +105,8 @@ nmap <Leader>/ :Ag!<SPACE>
 "noremap <leader>/ :Ag! -Q <C-r>=expand('<cword>')<CR><CR>
 " Search for word under visual selection
 vnoremap <Leader>/ y:Ag! <C-r>=fnameescape(@")<CR><CR>
+
+"------ Language (Tabs) -----
+autocmd FileType make set noexpandtab
+autocmd FileType python set noexpandtab
+autocmd FileType c setl tabstop=8 shiftwidth=4 softtabstop=4 noexpandtab
