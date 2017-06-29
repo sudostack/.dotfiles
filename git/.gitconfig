@@ -8,5 +8,4 @@
 [credential]
 	helper = osxkeychain
 [core]
-	excludesfile = /Users/dwu/.gitignore_global
-	excludesfile = /Users/davidwu/.gitignore_global
+	excludesfile = ~/.gitignore_global
