@@ -8,6 +8,8 @@ call plug#begin('~/.config/nvim/plugged')
 
   Plug 'airblade/vim-gitgutter'                                     " Git diffing
   Plug 'bling/vim-airline'                                          " Powerline-ish
+    let g:airline_powerline_fonts=1
+    let g:airline#extensions#tabline#enabled=1
   Plug 'junegunn/vim-easy-align'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
     let $FZF_DEFAULT_COMMAND = 'ag -g ""'
@@ -39,9 +41,6 @@ filetype plugin indent on
 " Leader
 let g:mapleader=' '
 let mapleader=' '
-
-" Airline
-let g:airline_powerline_fonts=1
 
 " Terminal Colors
 let g:terminal_color_0  = '#2e3436'
