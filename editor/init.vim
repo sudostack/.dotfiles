@@ -29,7 +29,10 @@ call plug#begin('~/.config/nvim/plugged')
     inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
   Plug 'rizzatti/dash.vim'                                          " Dash Docs plugin
   Plug 'slashmili/alchemist.vim'                                    " Elixir integration
-    let g:alchemist_tag_disable = 1
+    "let g:alchemist_tag_disable = 1
+    "let g:alchemist_tag_map = '<C-]>'
+    "let g:alchemist_tag_stack_map = '<C-T>'
+    let g:alchemist#elixir_erlang_src = "$HOME/.asdf/shims/elixir"
   Plug 'tpope/vim-fugitive'                                         " Git
 
 call plug#end()
@@ -95,6 +98,7 @@ set smartcase                           " Searching with capital letters
 set smartindent
 set smarttab
 set softtabstop=2
+set tags=tags,./tags,$HOME/tags
 set tabstop=2                           " Render TABs using n number of spaces
 "set tags=$HOME/.ctags
 set termguicolors
