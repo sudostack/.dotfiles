@@ -5,11 +5,18 @@ call plug#begin('~/.config/nvim/plugged')
   " Themes
   Plug 'morhetz/gruvbox'
   Plug 'w0ng/vim-hybrid'
+  Plug 'jacoborus/tender.vim'
+  Plug 'sonph/onehalf', {'rtp': 'vim/'}
+  " vim >=8.0 or Neovim >= 0.1.5
+  if (has("termguicolors"))
+    set termguicolors
+  endif
 
   Plug 'airblade/vim-gitgutter'                                     " Git diffing
   Plug 'bling/vim-airline'                                          " Powerline-ish
     let g:airline_powerline_fonts=1
     let g:airline#extensions#tabline#enabled=1
+    let g:airline_theme='onehalfdark'
   Plug 'junegunn/vim-easy-align'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
     let $FZF_DEFAULT_COMMAND = 'ag -g ""'
@@ -107,7 +114,7 @@ set t_Co=256                            " Moar colors
 
 syntax enable
 
-colorscheme gruvbox
+colorscheme onehalfdark
 
 " ----- KEY MAPPINGS ---
 
