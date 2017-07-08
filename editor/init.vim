@@ -64,7 +64,7 @@ set cursorcolumn                        " Highlight cursor position (col)
 set encoding=utf-8
 set expandtab                           " Insert space chars for TAB
 set fileencoding=utf-8
-" set hidden                            " Avoid persisting closed buffers
+set hidden                              " Avoid persisting closed buffers
 set hlsearch                            " Highlight search
 set incsearch                           " Incremental highlighting while searching
 set ignorecase                          " Case-insensitive searches
