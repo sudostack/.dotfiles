@@ -30,6 +30,12 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd BufEnter * EnableStripWhitespaceOnSave
   Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
+  Plug 'scrooloose/nerdtree'                                        " File system explorer
+    " Open NERDtree automatically when no file has been specified
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    " Close NERDtree if it's the only window open/left
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   Plug 'sheerun/vim-polyglot'                                       " Syntax highlighting (async)
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Autocompletion
     let g:deoplete#enable_at_startup = 1                            " Use deoplete
@@ -125,6 +131,11 @@ nmap <Leader>/ :Ag!<SPACE>
 "noremap <leader>/ :Ag! -Q <C-r>=expand('<cword>')<CR><CR>
 " Search for word under visual selection
 vnoremap <Leader>/ y:Ag! <C-r>=fnameescape(@")<CR><CR>
+
+" Open NERDtree
+map <C-n> :NERDTreeToggle<CR>
+" Show current buffer in NERDtree
+nmap <C-m> :NERDTreeFind<CR>
 
 "------ Language (Tabs) -----
 autocmd FileType make set noexpandtab
