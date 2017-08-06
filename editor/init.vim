@@ -32,8 +32,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
   Plug 'scrooloose/nerdtree'                                        " File system explorer
     " Open NERDtree automatically when no file has been specified
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    "autocmd StdinReadPre * let s:std_in=1
+    "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     " Close NERDtree if it's the only window open/left
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   Plug 'sheerun/vim-polyglot'                                       " Syntax highlighting (async)
