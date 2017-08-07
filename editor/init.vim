@@ -47,6 +47,9 @@ call plug#begin('~/.config/nvim/plugged')
     "let g:alchemist_tag_stack_map = '<C-T>'
     let g:alchemist#elixir_erlang_src = "$HOME/.asdf/shims/elixir"
   Plug 'tpope/vim-fugitive'                                         " Git
+  Plug 'Yggdroot/indentLine'
+    "let g:indentLine_color_term = 232
+    let g:indentLine_color_gui = "#555555"
 
 call plug#end()
 
@@ -66,7 +69,7 @@ set clipboard=unnamed                   " Copy to system clipboard
 set completeopt=longest,menuone,preview
 set copyindent
 set cursorline                          " Highlight cursor position (row/line)
-set cursorcolumn                        " Highlight cursor position (col)
+" set cursorcolumn                        " Highlight cursor position (col)
 set encoding=utf-8
 set expandtab                           " Insert space chars for TAB
 set fileencoding=utf-8
