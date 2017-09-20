@@ -30,7 +30,7 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd BufEnter * EnableStripWhitespaceOnSave
   Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
-  Plug 'scrooloose/nerdtree'                                        " File system explorer
+  "Plug 'scrooloose/nerdtree'                                        " File system explorer
     " Open NERDtree automatically when no file has been specified
     "autocmd StdinReadPre * let s:std_in=1
     "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -47,9 +47,9 @@ call plug#begin('~/.config/nvim/plugged')
     "let g:alchemist_tag_stack_map = '<C-T>'
     let g:alchemist#elixir_erlang_src = "$HOME/.asdf/shims/elixir"
   Plug 'tpope/vim-fugitive'                                         " Git
-  Plug 'Yggdroot/indentLine'
+  "Plug 'Yggdroot/indentLine'
     "let g:indentLine_color_term = 232
-    let g:indentLine_color_gui = "#555555"
+    "let g:indentLine_color_gui = "#555555"
 
 call plug#end()
 
