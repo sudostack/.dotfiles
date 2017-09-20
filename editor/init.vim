@@ -140,7 +140,12 @@ map <C-n> :NERDTreeToggle<CR>
 " Show current buffer in NERDtree
 nmap <C-m> :NERDTreeFind<CR>
 
+" Line widths
+autocmd FileType elixir set textwidth=120
+autocmd FileType elixir set textwidth=120
+
 "------ Language (Tabs) -----
 autocmd FileType make set noexpandtab
 autocmd FileType python set noexpandtab
 autocmd FileType c setl tabstop=8 shiftwidth=4 softtabstop=4 noexpandtab
+
