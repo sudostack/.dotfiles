@@ -1,6 +1,7 @@
 alias desk='cd ~/Desktop'
+alias help='less ~/Desktop/til/unix.md'
+alias h=help
 alias ls='ls -Gp'
-alias emacsc='emacsclient -c'
 alias whatsmyip='curl ipinfo.io/ip'
 
 # Git
