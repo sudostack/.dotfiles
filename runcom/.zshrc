@@ -101,6 +101,16 @@ export ALTERNATE_EDITOR=""
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# cheatsheets
+function cheat() {
+  if [[ $1 == 'elixir' ]]
+  then
+    less ~/Desktop/til/elixir-phoenix/$2.md
+  else
+    less ~/Desktop/til/$1.md
+  fi
+}
+
 # Gitignore.io
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
