@@ -101,13 +101,18 @@ export ALTERNATE_EDITOR=""
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-# cheatsheets
-function cheat() {
-  if [[ $1 == 'elixir' ]]
-  then
-    less ~/Desktop/til/elixir-phoenix/$2.md
+# TIL
+function til() {
+  if [[ $1 == "elixir-phoenix" && -z $2 ]]; then
+    open https://github.com/sudostack/til/blob/master/elixir-phoenix
+  elif [[ $1 == "elixir-phoenix" ]]; then
+    open https://github.com/sudostack/til/blob/master/elixir-phoenix/$2.md
+  elif [[  $1 == "elixir" && -z $2 ]]; then
+    open https://github.com/sudostack/til/blob/master/elixir
+  elif [[ $1 == "elixir" ]]; then
+    open https://github.com/sudostack/til/blob/master/elixir/$2.md
   else
-    less ~/Desktop/til/$1.md
+    open https://github.com/sudostack/til
   fi
 }
 
