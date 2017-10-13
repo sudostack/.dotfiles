@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
     let g:airline_powerline_fonts=1
     let g:airline#extensions#tabline#enabled=1
     let g:airline_theme='onehalfdark'
+  Plug 'godlygeek/tabular'
   Plug 'junegunn/vim-easy-align'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
     let $FZF_DEFAULT_COMMAND = 'ag -g ""'
@@ -28,6 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd! BufWritePost * Neomake
   Plug 'ntpeters/vim-better-whitespace'
     autocmd BufEnter * EnableStripWhitespaceOnSave
+  Plug 'plasticboy/vim-markdown'
   Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
   "Plug 'scrooloose/nerdtree'                                        " File system explorer
