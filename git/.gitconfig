@@ -9,3 +9,5 @@
 	helper = osxkeychain
 [core]
 	excludesfile = ~/.gitignore_global
+[branch]
+	autoSetupRebase = always
