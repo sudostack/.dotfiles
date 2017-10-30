@@ -32,7 +32,7 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd! BufWritePost * Neomake
   Plug 'ntpeters/vim-better-whitespace'
     autocmd BufEnter * EnableStripWhitespaceOnSave
-  Plug 'plasticboy/vim-markdown'
+  "Plug 'plasticboy/vim-markdown'
   Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
   "Plug 'scrooloose/nerdtree'                                        " File system explorer
