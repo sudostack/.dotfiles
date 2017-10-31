@@ -34,6 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd BufEnter * EnableStripWhitespaceOnSave
   "Plug 'plasticboy/vim-markdown'
   Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
+  Plug 'rizzatti/dash.vim'
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
   "Plug 'scrooloose/nerdtree'                                        " File system explorer
     " Open NERDtree automatically when no file has been specified
