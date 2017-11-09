@@ -69,7 +69,7 @@ YARN=$HOME/.yarn/bin
 
 # User configuration
 # if [ `whoami` = 'davidwu' ] && [ `hostname` = 'sudostackMBP' ]; then
-export PATH="/usr/local/Cellar:$HOMEBREW:$HOME/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/bin:$HOME/.node/bin:$NODE_PATH:$YARN:"
+export PATH="/usr/local/Cellar:$HOMEBREW:$HOME/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/bin:$NODEPATH:$YARN:"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
