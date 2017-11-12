@@ -64,12 +64,13 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 HOMEBREW=/usr/local/bin:/usr/local/sbin:/usr/local/opt
-NODEPATH=/Users/davidwu/.asdf/shims/node
+NODEPATH=$HOME/.asdf/shims/node
+NODE_MODULES=$(pwd)/node_modules/.bin
 YARN=$HOME/.yarn/bin
 
 # User configuration
 # if [ `whoami` = 'davidwu' ] && [ `hostname` = 'sudostackMBP' ]; then
-export PATH="/usr/local/Cellar:$HOMEBREW:$HOME/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/bin:$NODEPATH:$YARN:"
+export PATH="/usr/local/Cellar:$HOMEBREW:$HOME/.rbenv/shims:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$HOME/bin:$NODEPATH:$YARN:$NODE_MODULES"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
