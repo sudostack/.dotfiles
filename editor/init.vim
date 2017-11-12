@@ -7,6 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'w0ng/vim-hybrid'
   Plug 'jacoborus/tender.vim'
   Plug 'sonph/onehalf', {'rtp': 'vim/'}
+
   " vim >=8.0 or Neovim >= 0.1.5
   if (has("termguicolors"))
     set termguicolors
