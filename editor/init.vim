@@ -3,15 +3,10 @@
 call plug#begin('~/.config/nvim/plugged')
 
   " Themes
-  Plug 'morhetz/gruvbox'
-  Plug 'w0ng/vim-hybrid'
   Plug 'jacoborus/tender.vim'
+  Plug 'morhetz/gruvbox'
   Plug 'sonph/onehalf', {'rtp': 'vim/'}
-
-  " vim >=8.0 or Neovim >= 0.1.5
-  if (has("termguicolors"))
-    set termguicolors
-  endif
+  Plug 'w0ng/vim-hybrid'
 
   Plug 'airblade/vim-gitgutter'                                     " Git diffing
   Plug 'bling/vim-airline'                                          " Powerline-ish
@@ -55,8 +50,8 @@ call plug#begin('~/.config/nvim/plugged')
     let g:alchemist#elixir_erlang_src = "$HOME/.asdf/shims/elixir"
   Plug 'tpope/vim-fugitive'                                         " Git
   "Plug 'Yggdroot/indentLine'
-    "let g:indentLine_color_term = 232
-    "let g:indentLine_color_gui = "#555555"
+    "let g:indentLine_color_term=232
+    "let g:indentLine_color_gui="#555555"
 
 call plug#end()
 
@@ -106,7 +101,10 @@ set softtabstop=2
 set tags=tags,./tags,$HOME/tags
 set tabstop=2                           " Render TABs using n number of spaces
 "set tags=$HOME/.ctags
-set termguicolors
+" vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+  set termguicolors
+endif
 set title                               " Set the title of the iTerm tab
 set t_Co=256                            " Moar colors
 
@@ -114,7 +112,20 @@ syntax enable
 
 colorscheme onehalfdark
 
-" ----- KEY MAPPINGS ---
+" Line widths
+autocmd FileType elixir set textwidth=120
+autocmd FileType elixir set textwidth=120
+
+" Language (Tabs)
+autocmd FileType make set noexpandtab
+autocmd FileType python set noexpandtab
+autocmd FileType c setl tabstop=8 shiftwidth=4 softtabstop=4 noexpandtab
+
+" Crontab
+autocmd filetype crontab setlocal nobackup nowritebackup
+
+
+" ----- KEY MAPPINGS -----
 
 " Fix (deoplete) <C-c> escape doesn't trigger `InsertLeave` event
 " Still need this because `dd` is deleting two lines now
@@ -146,16 +157,3 @@ vnoremap <Leader>/ y:Ag! <C-r>=fnameescape(@")<CR><CR>
 map <C-n> :NERDTreeToggle<CR>
 " Show current buffer in NERDtree
 nmap <C-m> :NERDTreeFind<CR>
-
-" Line widths
-autocmd FileType elixir set textwidth=120
-autocmd FileType elixir set textwidth=120
-
-"------ Language (Tabs) -----
-autocmd FileType make set noexpandtab
-autocmd FileType python set noexpandtab
-autocmd FileType c setl tabstop=8 shiftwidth=4 softtabstop=4 noexpandtab
-
-" Crontab
-autocmd filetype crontab setlocal nobackup nowritebackup
-
