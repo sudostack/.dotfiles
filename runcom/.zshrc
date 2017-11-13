@@ -65,7 +65,7 @@ source $ZSH/oh-my-zsh.sh
 
 HOMEBREW=/usr/local/bin:/usr/local/sbin:/usr/local/opt
 NODEPATH=$HOME/.asdf/shims/node
-NODE_MODULES=$(pwd)/node_modules/.bin
+NODE_MODULES=$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin
 YARN=$HOME/.yarn/bin
 
 # User configuration
