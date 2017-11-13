@@ -1,20 +1,8 @@
-# Powerline-ZSH
-# function powerline_prompt()
-# {
-#     export PROMPT="$(~/.dotfiles/powerline-zsh/powerline-zsh.py --cwd-only -m konsole $?)"
-# }
-
-# precmd()
-# {
-#     powerline_prompt
-# }
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Pure
 autoload -U promptinit; promptinit
-# prompt pure
 
 # ZSH_THEME="miloshadzic"
 # ZSH_THEME="nanotech"
@@ -68,8 +56,6 @@ NODEPATH=$HOME/.asdf/shims/node
 NODE_MODULES=$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin
 YARN=$HOME/.yarn/bin
 
-# User configuration
-# if [ `whoami` = 'davidwu' ] && [ `hostname` = 'sudostackMBP' ]; then
 export PATH="/usr/local/Cellar:$HOMEBREW:$HOME/.rbenv/shims:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$HOME/bin:$NODEPATH:$YARN:$NODE_MODULES"
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -83,9 +69,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
-
-# Emacs
-export ALTERNATE_EDITOR=""
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -121,6 +104,3 @@ function til() {
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 eval "$(direnv hook zsh)"
-
-# Fzf
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
