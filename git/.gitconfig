@@ -11,3 +11,5 @@
 	excludesfile = ~/.gitignore_global
 [branch]
 	autoSetupRebase = always
+[rerere]
+	enabled = true
