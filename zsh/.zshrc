@@ -21,6 +21,9 @@ else
   export EDITOR='nvim'
 fi
 
+# Preferred visual editor
+export VISUAL='nvim'
+
 # asdf (Elixir, Erlang version manager)
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
