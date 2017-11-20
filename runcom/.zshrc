@@ -51,12 +51,15 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-HOMEBREW=/usr/local/bin:/usr/local/sbin:/usr/local/opt
-NODEPATH=$HOME/.asdf/shims/node
-NODE_MODULES=$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin
-YARN=$HOME/.yarn/bin
+HOMEBREW="/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:/usr/local/opt"
+JUST_BINS="/bin:/sbin:$HOME/bin"
+OPT_BINS="/opt/local/bin:/opt/local/sbin"
+NODE_PATH="$HOME/.asdf/shims/node"
+NODE_MODULES="$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin"
+USR_BINS="/usr/bin:/usr/sbin"
+YARN="$HOME/.yarn/bin"
 
-export PATH="/usr/local/Cellar:$HOMEBREW:$HOME/.rbenv/shims:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$HOME/bin:$NODEPATH:$YARN:$NODE_MODULES"
+export PATH="$HOMEBREW:$USR_BINS:$JUST_BINS:$OPT_BINS:$NODE_PATH:$YARN:$NODE_MODULES"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -85,6 +88,9 @@ fi
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# Gitignore.io
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
 # TIL
 function til() {
   if [[ $1 == "elixir-phoenix" && -z $2 ]]; then
@@ -99,8 +105,5 @@ function til() {
     open https://github.com/sudostack/til
   fi
 }
-
-# Gitignore.io
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 eval "$(direnv hook zsh)"
