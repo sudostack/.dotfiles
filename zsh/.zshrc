@@ -63,3 +63,8 @@ alias brake='bundle install&&bundle exec rake db:migrate&&bundle exec rake db:te
 
 ## The RealReal
 alias trrapigateway='/Users/davidwu/Desktop/trr/go/src/github.com/TheRealReal/therealreal-api'
+
+# Direnv
+eval "$(direnv hook zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
