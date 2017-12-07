@@ -6,7 +6,8 @@ alias whatsmyip='curl ipinfo.io/ip'
 
 # Git
 alias gcb='git rev-parse --abbrev-ref HEAD'
-alias grecent='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort'
+#alias grecent='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort'
+alias grecent='git branch --sort=committerdate'
 alias gbdmerged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # Ruby on Rails

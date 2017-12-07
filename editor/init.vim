@@ -154,6 +154,6 @@ nmap <Leader>/ :Ag!<SPACE>
 vnoremap <Leader>/ y:Ag! <C-r>=fnameescape(@")<CR><CR>
 
 " Open NERDtree
-map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
 " Show current buffer in NERDtree
-nmap <C-m> :NERDTreeFind<CR>
+"nmap <C-m> :NERDTreeFind<CR>
