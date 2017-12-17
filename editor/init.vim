@@ -114,7 +114,6 @@ colorscheme onehalfdark
 
 " Line widths
 autocmd FileType elixir set textwidth=120
-autocmd FileType elixir set textwidth=120
 
 " Language (Tabs)
 autocmd FileType make set noexpandtab
