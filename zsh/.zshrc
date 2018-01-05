@@ -12,6 +12,7 @@ NODE_MODULES="$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.b
 USR_BINS="/usr/bin:/usr/sbin"
 YARN="$HOME/.yarn/bin"
 
+export HISTFILE="$HOME/.zsh_history"
 export PATH="$HOMEBREW:$USR_BINS:$JUST_BINS:$OPT_BINS:$NODE_PATH:$YARN:$NODE_MODULES"
 
 # Preferred editor for local and remote sessions
