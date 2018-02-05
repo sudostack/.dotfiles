@@ -13,3 +13,5 @@
 	autoSetupRebase = always
 [rerere]
 	enabled = true
+[http]
+	postBuffer = 524288000
