@@ -117,7 +117,6 @@ autocmd FileType elixir set textwidth=120
 
 " Language (Tabs)
 autocmd FileType make set noexpandtab
-"autocmd FileType python set noexpandtab
 autocmd FileType c setl tabstop=8 shiftwidth=4 softtabstop=4 noexpandtab
 
 " Crontab
