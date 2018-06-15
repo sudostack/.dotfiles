@@ -117,8 +117,9 @@ colorscheme onehalfdark
 autocmd FileType elixir set textwidth=120
 
 " Language (Tabs)
-autocmd FileType make set noexpandtab
 autocmd FileType c setl tabstop=8 shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType make set noexpandtab
+autocmd Filetype python inoremap # X<C-h>#
 
 " Crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
