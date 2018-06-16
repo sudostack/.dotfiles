@@ -50,6 +50,7 @@ call plug#begin('~/.config/nvim/plugged')
     "let g:alchemist_tag_stack_map = '<C-T>'
     let g:alchemist#elixir_erlang_src = "$HOME/.asdf/shims/elixir"
   Plug 'tpope/vim-fugitive'                                         " Git
+  Plug 'tpope/vim-surround'
   "Plug 'Yggdroot/indentLine'
     "let g:indentLine_color_term=232
     "let g:indentLine_color_gui="#555555"
@@ -77,7 +78,7 @@ set encoding=utf-8
 set expandtab                           " Insert space chars for TAB
 set fileencoding=utf-8
 set hidden                              " Avoid persisting closed buffers
-set hlsearch                            " Highlight search
+set nohlsearch                          " Highlight search (OFF)
 set incsearch                           " Incremental highlighting while searching
 set ignorecase                          " Case-insensitive searches
 set lazyredraw                          " Aid in slow redrawing because of 'cursorline'
