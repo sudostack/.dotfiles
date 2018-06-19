@@ -37,7 +37,7 @@ call plug#begin('~/.config/nvim/plugged')
     "autocmd StdinReadPre * let s:std_in=1
     "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     " Close NERDtree if it's the only window open/left
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   Plug 'sheerun/vim-polyglot'                                       " Syntax highlighting (async)
     let g:vim_markdown_new_list_item_indent = 2                     " Markdown default indentation
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Autocompletion
@@ -102,8 +102,6 @@ set smarttab
 set softtabstop=2
 set tags=tags,./tags,$HOME/tags
 set tabstop=2                           " Render TABs using n number of spaces
-"set tags=$HOME/.ctags
-" vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -115,7 +113,7 @@ syntax enable
 colorscheme onehalfdark
 
 " Line widths
-autocmd FileType elixir set textwidth=120
+"autocmd FileType elixir set textwidth=120
 
 " Language (Tabs)
 autocmd FileType c setl tabstop=8 shiftwidth=4 softtabstop=4 noexpandtab
