@@ -89,6 +89,7 @@ set noerrorbells                        " No beeps
 set nojoinspaces                        " Prevents insertion of two spaces after punctuation on line join (J)
 set noswapfile                          " Don't make backups before overwriting
 set number                              " Always show line numbers
+set relativenumber                      " Always show line numbers
 set rtp+=/usr/local/opt/fzf             " For fzf
 set ruler                               " Show the line and column numbers
 set shiftround
