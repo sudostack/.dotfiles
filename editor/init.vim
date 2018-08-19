@@ -40,6 +40,7 @@ call plug#begin('~/.config/nvim/plugged')
     "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   Plug 'sheerun/vim-polyglot'                                       " Syntax highlighting (async)
     let g:vim_markdown_new_list_item_indent = 2                     " Markdown default indentation
+    let g:python_highlight_all = 1
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Autocompletion
     let g:deoplete#enable_at_startup = 1                            " Use deoplete
     inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
