@@ -29,6 +29,13 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ntpeters/vim-better-whitespace'
     autocmd BufEnter * EnableStripWhitespaceOnSave
   "Plug 'plasticboy/vim-markdown'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  "\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+    let g:prettier#exec_cmd_async = 1
+    let g:prettier#autoformat = 0
+    autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+    let g:prettier#autoformat = 0
+    autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
   Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
   Plug 'rizzatti/dash.vim'
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
