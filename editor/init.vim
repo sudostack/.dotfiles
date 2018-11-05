@@ -36,6 +36,8 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
     let g:prettier#autoformat = 0
     autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+    let g:prettier#config#print_width = 80
+    let g:prettier#config#bracket_spacing = 'true'
   Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
   Plug 'rizzatti/dash.vim'
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
