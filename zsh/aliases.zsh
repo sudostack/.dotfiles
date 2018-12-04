@@ -12,6 +12,3 @@ alias gbdmerged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # Ruby on Rails
 alias brake='bundle install&&bundle exec rake db:migrate&&bundle exec rake db:test:prepare'
-
-# The RealReal
-alias trrapigateway='/Users/davidwu/Desktop/trr/go/src/github.com/TheRealReal/therealreal-api'
