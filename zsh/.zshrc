@@ -1,3 +1,6 @@
+# HISTORY
+export HISTFILE="$HOME/.zsh_history"
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -9,11 +12,12 @@ JUST_BINS="/bin:/sbin:$HOME/bin"
 OPT_BINS="/opt/local/bin:/opt/local/sbin"
 NODE_PATH="$HOME/.asdf/shims/node"
 NODE_MODULES="$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin"
+PYTHON_PATHS="$HOME/.asdf/shims/python:$HOME/.asdf/shims/python3:$HOME/.asdf/shims/python3.7:$HOME/.local/lib/python3.7/site-packages"
+POSTGRES="/usr/local/Cellar/postgresql@9.6/9.6.10/bin"
 USR_BINS="/usr/bin:/usr/sbin"
 YARN="$HOME/.yarn/bin"
 
-export HISTFILE="$HOME/.zsh_history"
-export PATH="$HOMEBREW:$USR_BINS:$JUST_BINS:$OPT_BINS:$NODE_PATH:$YARN:$NODE_MODULES"
+export PATH="$HOMEBREW:$JUST_BINS:$OPT_BINS:$PYTHON_PATHS:$NODE_PATH:$YARN:$NODE_MODULES:$POSTGRES:$USR_BINS"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -26,8 +30,7 @@ fi
 export VISUAL='nvim'
 
 # asdf (Elixir, Erlang version manager)
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+source /usr/local/opt/asdf/asdf.sh
 
 # Gitignore.io
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
@@ -48,7 +51,6 @@ function til() {
 }
 
 # Aliases
-
 alias desk='cd ~/Desktop'
 alias help='less ~/Desktop/til/unix.md'
 alias h=help
@@ -56,16 +58,19 @@ alias ls='ls -Gp'
 alias whatsmyip='curl ipinfo.io/ip'
 
 ## Git
-
-alias gbrecent='git branch --sort=committerdate'
-#alias grecent='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort'
+alias gbrecent='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort'
 alias gbdmerged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 ## Ruby on Rails
 alias brake='bundle install&&bundle exec rake db:migrate&&bundle exec rake db:test:prepare'
 
-## The RealReal
-alias trrapigateway='/Users/davidwu/Desktop/trr/go/src/github.com/TheRealReal/therealreal-api'
+## Rivi
+alias start_apps="nginx -c \$APPS_PATH/dist/nginx/nginx.conf"
+alias restart_apps="nginx -s reload"
+alias stop_apps="nginx -s stop"
+
+alias api-restore="RACK_ENV=development bundle exec rake db:restore"
+alias api-migrate="RACK_ENV=development bundle exec rake db:migrate"
 
 # Direnv
 eval "$(direnv hook zsh)"
