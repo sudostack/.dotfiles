@@ -7,17 +7,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-HOMEBREW="/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:/usr/local/opt"
-JUST_BINS="/bin:/sbin:$HOME/bin"
-OPT_BINS="/opt/local/bin:/opt/local/sbin"
-NODE_PATH="$HOME/.asdf/shims/node"
-NODE_MODULES="$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin"
-PYTHON_PATHS="$HOME/.asdf/shims/python:$HOME/.asdf/shims/python3:$HOME/.asdf/shims/python3.7:$HOME/.local/lib/python3.7/site-packages"
-POSTGRES="/usr/local/Cellar/postgresql@9.6/9.6.10/bin"
-USR_BINS="/usr/bin:/usr/sbin"
-YARN="$HOME/.yarn/bin"
+export HOMEBREW="/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:/usr/local/opt"
+export BINS="/bin:/sbin:$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin"
+export NODE_PATH="$HOME/.asdf/shims/node"
+export NODE_MODULES="$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin"
+export PYTHON_PATHS="$HOME/.asdf/shims/python:$HOME/.asdf/shims/python3:$HOME/.asdf/shims/python3.7:$HOME/.local/lib/python3.7/site-packages:$HOME/.asdf/installs/python/3.7.1/lib/python3.7/site-packages"
+export POSTGRES="/usr/local/Cellar/postgresql@9.6/9.6.10/bin"
+export YARN="$HOME/.yarn/bin"
 
-export PATH="$HOMEBREW:$JUST_BINS:$OPT_BINS:$PYTHON_PATHS:$NODE_PATH:$YARN:$NODE_MODULES:$POSTGRES:$USR_BINS"
+export PATH
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
