@@ -27,9 +27,6 @@ fi
 # Preferred visual editor
 export VISUAL='nvim'
 
-# asdf (Elixir, Erlang version manager)
-source /usr/local/opt/asdf/asdf.sh
-
 # Gitignore.io
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
@@ -70,7 +67,15 @@ alias stop_apps="nginx -s stop"
 alias api-restore="RACK_ENV=development bundle exec rake db:restore"
 alias api-migrate="RACK_ENV=development bundle exec rake db:migrate"
 
-# Direnv
+# UTILITIES
+
+## asdf (Elixir, Erlang version manager)
+source /usr/local/opt/asdf/asdf.sh
+
+## Direnv
 eval "$(direnv hook zsh)"
+
+## Tmuxinator (autocompletion)
+source $HOME/.dotfiles/tmux/tmuxinator.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
