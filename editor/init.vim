@@ -77,7 +77,8 @@ filetype plugin indent on
 let g:mapleader=' '
 let mapleader=' '
 
-set autoread
+set autoread                            " Reload file when modified by external application
+au FocusGained * :checktime             " ^ required for the above to work within vim
 set autoindent                          " Use previous line indent for newly created line
 set background=dark
 set clipboard=unnamed                   " Copy to system clipboard
