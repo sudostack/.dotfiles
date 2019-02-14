@@ -12,7 +12,8 @@ export BINS="/bin:/sbin:$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/s
 export NODE_PATH="$HOME/.asdf/shims/node"
 export NODE_MODULES="$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin"
 export PYTHON_PATHS="$HOME/.asdf/shims/python:$HOME/.asdf/shims/python3:$HOME/.asdf/shims/python3.7:$HOME/.local/lib/python3.7/site-packages:$HOME/.asdf/installs/python/3.7.1/lib/python3.7/site-packages"
-export POSTGRES="/usr/local/Cellar/postgresql@9.6/9.6.10/bin"
+#export POSTGRES="/usr/local/Cellar/postgresql@9.6/9.6.10/bin"
+export POSTGRES="/Applications/Postgres.app/Contents/Versions/latest/bin"
 export YARN="$HOME/.yarn/bin"
 
 export PATH

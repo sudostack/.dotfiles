@@ -77,9 +77,9 @@ filetype plugin indent on
 let g:mapleader=' '
 let mapleader=' '
 
+set autoindent                          " Use previous line indent for newly created line
 set autoread                            " Reload file when modified by external application
 au FocusGained * :checktime             " ^ required for the above to work within vim
-set autoindent                          " Use previous line indent for newly created line
 set background=dark
 set clipboard=unnamed                   " Copy to system clipboard
 " set colorcolumn=80                    " Highlight chars exceeding 80 columns
@@ -90,14 +90,15 @@ set cursorline                          " Highlight cursor position (row/line)
 set encoding=utf-8
 set expandtab                           " Insert space chars for TAB
 set fileencoding=utf-8
+set foldmethod=syntax                   " Code folding
 set hidden                              " Avoid persisting closed buffers
-set nohlsearch                          " Highlight search (OFF)
-set incsearch                           " Incremental highlighting while searching
 set ignorecase                          " Case-insensitive searches
+set incsearch                           " Incremental highlighting while searching
 set lazyredraw                          " Aid in slow redrawing because of 'cursorline'
 set linespace=1                         " Line spacing
 set mouse=a                             " Allow mouse usage in all modes
 set noerrorbells                        " No beeps
+set nohlsearch                          " Highlight search (OFF)
 " set nohlsearch                        " No highlight when searching
 set nojoinspaces                        " Prevents insertion of two spaces after punctuation on line join (J)
 set noswapfile                          " Don't make backups before overwriting
@@ -105,17 +106,17 @@ set number                              " Always show line numbers
 set relativenumber                      " Always show line numbers
 set rtp+=/usr/local/opt/fzf             " For fzf
 set ruler                               " Show the line and column numbers
+set shell=zsh                           " Show (partial) command in status line
 set shiftround
 set shiftwidth=2                        " Indentation amount for < and > commands
-set shell=zsh                           " Show (partial) command in status line
 set showcmd                             " Show (partial) command in status line
 set showmatch                           " Show matching brackets
 set smartcase                           " Searching with capital letters
 set smartindent
 set smarttab
 set softtabstop=2
-set tags=tags,./tags,$HOME/tags
 set tabstop=2                           " Render TABs using n number of spaces
+set tags=tags,./tags,$HOME/tags
 if (has("termguicolors"))
   set termguicolors
 endif
