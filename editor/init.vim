@@ -115,6 +115,7 @@ set smartcase                           " Searching with capital letters
 set smartindent
 set smarttab
 set softtabstop=2
+set splitright                          " Split to right when opening new panes
 set tabstop=2                           " Render TABs using n number of spaces
 set tags=tags,./tags,$HOME/tags
 if (has("termguicolors"))
