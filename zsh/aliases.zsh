@@ -12,3 +12,11 @@ alias gbdmerged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # Ruby on Rails
 alias brake='bundle install&&bundle exec rake db:migrate&&bundle exec rake db:test:prepare'
+
+## Rivi
+alias start_apps="nginx -c \$APPS_PATH/dist/nginx/nginx.conf"
+alias restart_apps="nginx -s reload"
+alias stop_apps="nginx -s stop"
+
+alias api-restore="RACK_ENV=development bundle exec rake db:restore"
+alias api-migrate="RACK_ENV=development bundle exec rake db:migrate"
