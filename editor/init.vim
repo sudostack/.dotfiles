@@ -10,10 +10,12 @@ call plug#begin('~/.config/nvim/plugged')
 
   Plug 'airblade/vim-gitgutter'                                     " Git diffing
   Plug 'bling/vim-airline'                                          " Powerline-ish
+    "let g:airline#extensions#default#section_truncate_width = { 'a': 20, 'b': 79, 'x': 60, 'y': 88, 'z': 45, 'warning': 80, 'error': 80 }
+    "let g:airline_section_c = '%F'
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#formatter = 'unique_tail'
-    let g:airline_powerline_fonts=1
-    let g:airline#extensions#tabline#enabled=1
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#tabline#enabled = 1
     let g:airline_theme='onehalfdark'
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -38,7 +40,7 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
     let g:prettier#autoformat = 0
     autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-    let g:prettier#config#print_width = 80
+    let g:prettier#config#print_width = 120
     let g:prettier#config#bracket_spacing = 'true'
   Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
   Plug 'rizzatti/dash.vim'
