@@ -1,6 +1,3 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
 # Pure
 autoload -U promptinit; promptinit
 
@@ -49,17 +46,15 @@ ZSH_CUSTOM=$HOME/.dotfiles/zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
+# TOOLING
 HOMEBREW="/usr/local/Cellar:/usr/local/bin:/usr/local/sbin:/usr/local/opt"
-JUST_BINS="/bin:/sbin:$HOME/bin"
-OPT_BINS="/opt/local/bin:/opt/local/sbin"
-NODE_PATH="$HOME/.asdf/shims/node"
-NODE_MODULES="$(pwd)/node_modules/.bin:$HOME/.config/yarn/global/node_modules/.bin"
 USR_BINS="/usr/bin:/usr/sbin"
-YARN="$HOME/.yarn/bin"
+SYS_BINS="/bin:/sbin"
 
-export PATH="$HOMEBREW:$USR_BINS:$JUST_BINS:$OPT_BINS:$NODE_PATH:$YARN:$NODE_MODULES"
+# VM-specific paths
+GO_BINS="$HOME/.asdf/installs/golang/1.12.5/packages/bin"
+
+export PATH="$HOMEBREW:$GO_BINS:$USR_BINS:$SYS_BINS:"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -83,10 +78,6 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
-# asdf (Elixir, Erlang version manager)
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 # Gitignore.io
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
