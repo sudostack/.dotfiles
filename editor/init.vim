@@ -32,6 +32,7 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd! BufWritePost * Neomake
   Plug 'ntpeters/vim-better-whitespace'
     autocmd BufEnter * EnableStripWhitespaceOnSave
+    let g:strip_whitespace_confirm=0                                " Disable the confirmation
   "Plug 'plasticboy/vim-markdown'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   "\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
