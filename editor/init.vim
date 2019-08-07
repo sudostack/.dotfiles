@@ -3,10 +3,16 @@
 call plug#begin('~/.config/nvim/plugged')
 
   " Themes
-  Plug 'jacoborus/tender.vim'
-  Plug 'morhetz/gruvbox'
-  Plug 'sonph/onehalf', {'rtp': 'vim/'}
-  Plug 'w0ng/vim-hybrid'
+  "Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
+  Plug 'cocopon/iceberg.vim'
+  "Plug 'jacoborus/tender.vim'
+  Plug 'mhartington/oceanic-next'
+  "Plug 'morhetz/gruvbox'
+  Plug 'rainglow/vim'
+  Plug 'rakr/vim-two-firewatch'
+  "Plug 'sonph/onehalf', {'rtp': 'vim/'}
+  "Plug 'tjammer/blayu.vim'
+  "Plug 'w0ng/vim-hybrid'
 
   Plug 'airblade/vim-gitgutter'                                     " Git diffing
   Plug 'bling/vim-airline'                                          " Powerline-ish
@@ -16,10 +22,11 @@ call plug#begin('~/.config/nvim/plugged')
     let g:airline#extensions#tabline#formatter = 'unique_tail'
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tabline#enabled = 1
-    let g:airline_theme='onehalfdark'
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline#extensions#tabline#left_alt_sep = '|'
     "let g:airline#extensions#tabline#enabled=1
+  Plug 'vim-airline/vim-airline-themes'
+    let g:airline_theme='oceanicnext'
   Plug 'godlygeek/tabular'
   Plug 'junegunn/vim-easy-align'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
@@ -83,7 +90,6 @@ let mapleader=' '
 set autoindent                          " Use previous line indent for newly created line
 set autoread                            " Reload file when modified by external application
 au FocusGained * :checktime             " ^ required for the above to work within vim
-set background=dark
 set clipboard=unnamed                   " Copy to system clipboard
 " set colorcolumn=80                    " Highlight chars exceeding 80 columns
 set completeopt=longest,menuone,preview
@@ -128,8 +134,8 @@ set title                               " Set the title of the iTerm tab
 set t_Co=256                            " Moar colors
 
 syntax enable
-
-colorscheme onehalfdark
+set background=dark
+colorscheme OceanicNext
 
 " Line widths
 "autocmd FileType elixir set textwidth=120
