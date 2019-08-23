@@ -1,5 +1,7 @@
 [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
 
+exports EDITOR=nvim
+
 HOMEBREW_PREFIX=$(brew --prefix)
 if type brew &>/dev/null; then
   if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
