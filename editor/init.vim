@@ -15,10 +15,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-airline/vim-airline-themes'
     let g:airline_theme='oceanicnext'
   Plug 'godlygeek/tabular'
+  Plug 'jremmen/vim-ripgrep'                                        " ripgrep
+    let g:rg_window_location = 'bot'
   Plug 'junegunn/vim-easy-align'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
-    let $FZF_DEFAULT_COMMAND = 'ag -g ""'
   Plug 'junegunn/fzf.vim'                                           " Fzf for Vim
+    let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
   Plug 'ludovicchabant/vim-gutentags'                               " Manage tag files (ctags)
     let g:gutentags_cache_dir = '~/.tags_cache'
   Plug 'mattn/emmet-vim'
@@ -36,7 +38,6 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
     let g:prettier#config#print_width = 120
     let g:prettier#config#bracket_spacing = 'true'
-  Plug 'rking/ag.vim'                                               " Ag (Silver Searcher)
   Plug 'rizzatti/dash.vim'
   Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
   Plug 'sheerun/vim-polyglot'                                       " Syntax highlighting (async)
@@ -138,13 +139,10 @@ nmap <Leader>ffy :let @*=expand("%:p") <bar> :echo @*<CR>
 
 " Fuzzy finder
 nmap <Leader>pf :FZF<CR>
-" Ag (Silver Searcher)
-nmap <Leader>/ :Ag!<SPACE>
-
-" Search for word under cursor
-"noremap <leader>/ :Ag! -Q <C-r>=expand('<cword>')<CR><CR>
+" ripgrep
+nmap <Leader>/ :Rg<SPACE>
 " Search for word under visual selection
-vnoremap <Leader>/ y:Ag! <C-r>=fnameescape(@")<CR><CR>
+vnoremap <Leader>/ y:Rg <C-r>=fnameescape(@")<CR><CR>
 
 " Open NERDtree
 "map <C-n> :NERDTreeToggle<CR>
