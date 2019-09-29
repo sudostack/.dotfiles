@@ -2,9 +2,14 @@
 export EDITOR=nvim
 
 # HISTORY
-export HISTCONTROL=ignoredups
-export HISTFILESIZE=
-export HISTSIZE=
+HISTCONTROL=ignoredups:erasedups
+HISTFILESIZE=
+HISTSIZE=
+
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
 
 # PROMPT
 PS1="\W $ "
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
