@@ -6,6 +6,11 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'mhartington/oceanic-next'
 
   Plug 'airblade/vim-gitgutter'                                     " Git diffing
+  Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next',  'do': 'bash install.sh' }
+    " Launch gopls when Go files are in use
+    let g:LanguageClient_serverCommands = { 'go': ['gopls'] }
+    " Run gofmt on save (FIXME)
+    "autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
   Plug 'bling/vim-airline'                                          " Powerline-ish
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#formatter = 'short_path'
@@ -33,7 +38,6 @@ call plug#begin('~/.config/nvim/plugged')
   "\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
     let g:prettier#exec_cmd_async = 1
     let g:prettier#autoformat = 0
-    autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
     let g:prettier#autoformat = 0
     autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
     let g:prettier#config#print_width = 120
