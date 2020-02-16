@@ -13,3 +13,5 @@ shopt -s histappend
 PS1="\W $ "
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
