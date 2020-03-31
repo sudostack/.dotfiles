@@ -1,1 +1,2 @@
+alias desk='cd ~/Desktop'
 alias vim='nvim'
