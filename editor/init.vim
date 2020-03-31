@@ -48,6 +48,7 @@ call plug#begin('~/.config/nvim/plugged')
     let g:vim_markdown_new_list_item_indent = 2                     " Markdown default indentation
     let g:python_highlight_all = 1
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Autocompletion
+    let g:python3_host_prog = expand('~/.asdf/shims/python3')
     let g:deoplete#enable_at_startup = 1                            " Use deoplete
     inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
   Plug 'rizzatti/dash.vim'                                          " Dash Docs plugin
