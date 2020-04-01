@@ -1,15 +1,23 @@
 [user]
-	email = dwu207@gmail.com
-	name = David Wu
-[grep]
-	lineNumber = true
-[credential]
-	helper = osxkeychain
-[core]
-	excludesfile = ~/.gitignore_global
+  email = dwu207@gmail.com
+  name = David W
+
+[alias]
+   # delete merged branches
+  dmb = !sh -c 'git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d' -
+
+   # Clean deleted branches on remote
+  rpo = remote prune origin
 [branch]
-	autoSetupRebase = always
+  autoSetupRebase = always
+  sort = -authordate
+[core]
+  excludesfile = ~/.gitignore_global
+[credential]
+  helper = osxkeychain
+[grep]
+  lineNumber = true
 [rerere]
-	enabled = true
+  enabled = true
 [includeIf "gitdir:~/Desktop/work/"]
   path = ~/Desktop/work/.gitconfig
