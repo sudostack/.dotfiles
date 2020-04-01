@@ -1,10 +1,8 @@
 [user]
 	email = dwu207@gmail.com
-	name = David Wu (sudostack)
+	name = David Wu
 [grep]
 	lineNumber = true
-[alias]
-	g = grep --break --heading --line-number
 [credential]
 	helper = osxkeychain
 [core]
@@ -13,5 +11,5 @@
 	autoSetupRebase = always
 [rerere]
 	enabled = true
-[http]
-	postBuffer = 524288000
+[includeIf "gitdir:~/Desktop/work/"]
+  path = ~/Desktop/work/.gitconfig
