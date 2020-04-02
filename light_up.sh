@@ -16,7 +16,7 @@ set -o errexit
 # Homebrew
 if ! which brew; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  for utility in {asdf,ctags,direnv,fzf,nvim,ripgrep,tree}; do
+  for utility in {asdf,ctags,direnv,fzf,htop,nvim,ripgrep,tree}; do
     brew install "$utility";
   done
 else
