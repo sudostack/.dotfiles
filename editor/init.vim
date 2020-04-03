@@ -1,60 +1,91 @@
 " ----- PLUGINS -----
 
 call plug#begin('~/.config/nvim/plugged')
-
   " Themes
   Plug 'mhartington/oceanic-next'
 
-  Plug 'airblade/vim-gitgutter'                                     " Git diffing
+  " Git diffing
+  Plug 'airblade/vim-gitgutter'
+
   Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next',  'do': 'bash install.sh' }
     " Launch gopls when Go files are in use
     let g:LanguageClient_serverCommands = { 'go': ['gopls'] }
     " Run gofmt on save (FIXME)
     "autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
-  Plug 'bling/vim-airline'                                          " Powerline-ish
+
+  " Powerline-ish
+  Plug 'bling/vim-airline'
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#formatter = 'short_path'
     let g:airline#extensions#tabline#left_alt_sep = '|'
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline_powerline_fonts = 1
-  Plug 'vim-airline/vim-airline-themes'
-    let g:airline_theme='oceanicnext'
+
+  " editorconfig.org
+  Plug 'editorconfig/editorconfig-vim'
+
   Plug 'godlygeek/tabular'
-  Plug 'jremmen/vim-ripgrep'                                        " ripgrep
+
+  " ripgrep
+  Plug 'jremmen/vim-ripgrep'
     let g:rg_window_location = 'bot'
+
   Plug 'junegunn/vim-easy-align'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
-  Plug 'junegunn/fzf.vim'                                           " Fzf for Vim
+
+  " Fuzzy file search
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+  " Fzf for Vim
+  Plug 'junegunn/fzf.vim'
     let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
-  Plug 'ludovicchabant/vim-gutentags'                               " Manage tag files (ctags)
+
+  " Manage tag files (ctags)
+  Plug 'ludovicchabant/vim-gutentags'
     let g:gutentags_cache_dir = '~/.tags_cache'
+
   Plug 'mattn/emmet-vim'
-  Plug 'neomake/neomake'                                            " Plugin for running linters (async)
+
+  " Plugin for running linters (async)
+  Plug 'neomake/neomake'
     autocmd! BufWritePost * Neomake
+
+  " Disable the confirmation
   Plug 'ntpeters/vim-better-whitespace'
     autocmd BufEnter * EnableStripWhitespaceOnSave
-    let g:strip_whitespace_confirm=0                                " Disable the confirmation
-  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+    let g:strip_whitespace_confirm=0
+
+  Plug 'prettier/vim-prettier', { 'do': 'npm install' }
   "\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+    autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
     let g:prettier#exec_cmd_async = 1
     let g:prettier#autoformat = 0
     let g:prettier#autoformat = 0
-    autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
     let g:prettier#config#print_width = 120
     let g:prettier#config#bracket_spacing = 'true'
+
   Plug 'rizzatti/dash.vim'
-  Plug 'scrooloose/nerdcommenter'                                   " Comment/uncomment
-  Plug 'sheerun/vim-polyglot'                                       " Syntax highlighting (async)
-    let g:vim_markdown_new_list_item_indent = 2                     " Markdown default indentation
+
+  " Commenting/uncommenting
+  Plug 'scrooloose/nerdcommenter'
+
+  " Syntax highlighting (async)
+  Plug 'sheerun/vim-polyglot'
+    let g:vim_markdown_new_list_item_indent = 2 " Markdown default indentation
     let g:python_highlight_all = 1
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Autocompletion
+
+  " Autocompletion
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    let g:deoplete#enable_at_startup = 1 " Use deoplete
     let g:python3_host_prog = expand('~/.asdf/shims/python3')
-    let g:deoplete#enable_at_startup = 1                            " Use deoplete
     inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
-  Plug 'rizzatti/dash.vim'                                          " Dash Docs plugin
-  Plug 'slashmili/alchemist.vim'                                    " Elixir integration
-  Plug 'tpope/vim-fugitive'                                         " Git
+
+  " Git
+  Plug 'tpope/vim-fugitive'
+
   Plug 'tpope/vim-surround'
+
+  Plug 'vim-airline/vim-airline-themes'
+    let g:airline_theme='oceanicnext'
 
 call plug#end()
 
