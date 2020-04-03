@@ -13,6 +13,14 @@ RESOURCES:
 set -o nounset
 set -o errexit
 
+# SSH
+if [ ! -f ~/.ssh/id_rsa ]; then
+  ssh-keygen -t rsa -b 4096 -C "dwu207@gmail.com"
+  ssh-add ~/.ssh/id_rsa
+else
+  echo 'SSH key already exists'
+fi
+
 # Homebrew
 if ! which brew; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -23,29 +31,7 @@ else
   echo 'homebrew already installed'
 fi
 
-# SSH
-if [ ! -f ~/.ssh/id_rsa ]; then
-  ssh-keygen -t rsa -b 4096 -C "dwu207@gmail.com"
-  ssh-add ~/.ssh/id_rsa
-else
-  echo 'SSH key already exists'
-fi
-
-# Git
-ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/git/.gitignore_global ~/.gitignore_global
-
-# Vim Plug (Neovim)
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# Neovim config
-if [ ! -d ~/.config/nvim ]; then
-  mkdir ~/.config && mkdir ~/.config/nvim && ln -s ~/.dotfiles/editor/init.vim ~/.config/nvim/init.vim
-fi
-
 # dotfiles
-# symlink dotfiles into host machine's $HOME
 if [ -d ~/.dotfiles ]; then
   cd ~
   for file in ~/.dotfiles/.{bashrc,bash_profile,exports,aliases,functions,utilities}; do
@@ -54,3 +40,16 @@ if [ -d ~/.dotfiles ]; then
 else
   echo 'dotfiles already exist'
 fi
+
+# Git
+ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/git/.gitignore_global ~/.gitignore_global
+
+# Neovim config
+if [ ! -d ~/.config/nvim ]; then
+  mkdir ~/.config && mkdir ~/.config/nvim && ln -s ~/.dotfiles/editor/init.vim ~/.config/nvim/init.vim
+fi
+
+# Vim Plug (Neovim)
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
