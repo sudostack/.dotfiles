@@ -45,6 +45,9 @@ call plug#begin('~/.config/nvim/plugged')
 
   Plug 'mattn/emmet-vim'
 
+  " Conquer of Completion (CoC) / language server support
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
   " Plugin for running linters (async)
   Plug 'neomake/neomake'
     autocmd! BufWritePost * Neomake
@@ -92,6 +95,7 @@ call plug#end()
 " ----- SETTINGS -----
 
 filetype plugin indent on
+let g:ruby_host_prog = expand('~/.asdf/shims/ruby')
 
 " Leader
 let g:mapleader=' '
