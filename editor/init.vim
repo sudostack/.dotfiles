@@ -7,12 +7,6 @@ call plug#begin('~/.config/nvim/plugged')
   " Git diffing
   Plug 'airblade/vim-gitgutter'
 
-  Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next',  'do': 'bash install.sh' }
-    " Launch gopls when Go files are in use
-    let g:LanguageClient_serverCommands = { 'go': ['gopls'] }
-    " Run gofmt on save (FIXME)
-    "autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
-
   " Powerline-ish
   Plug 'bling/vim-airline'
     let g:airline#extensions#tabline#enabled = 1
@@ -20,6 +14,15 @@ call plug#begin('~/.config/nvim/plugged')
     let g:airline#extensions#tabline#left_alt_sep = '|'
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline_powerline_fonts = 1
+
+  " Asynchronous Lint Engine for:
+  " linting, fixing, completion, go to def, find ref, hover, symbol search
+  Plug 'dense-analysis/ale'
+  let g:ale_fix_on_save = 1
+  let g:ale_fixers = {
+        \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+        \   'javascript': ['eslint'],
+        \}
 
   " editorconfig.org
   Plug 'editorconfig/editorconfig-vim'
@@ -76,8 +79,8 @@ call plug#begin('~/.config/nvim/plugged')
     let g:vim_markdown_new_list_item_indent = 2 " Markdown default indentation
     let g:python_highlight_all = 1
 
-  " Autocompletion
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    " Autocompletion
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     let g:deoplete#enable_at_startup = 1 " Use deoplete
     let g:python3_host_prog = expand('~/.asdf/shims/python3')
     inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
@@ -96,6 +99,7 @@ call plug#end()
 
 filetype plugin indent on
 let g:ruby_host_prog = expand('~/.asdf/shims/ruby')
+call deoplete#custom#option('sources', { '_': ['ale'], })
 
 " Leader
 let g:mapleader=' '
