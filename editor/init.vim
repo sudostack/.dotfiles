@@ -79,12 +79,6 @@ call plug#begin('~/.config/nvim/plugged')
     let g:vim_markdown_new_list_item_indent = 2 " Markdown default indentation
     let g:python_highlight_all = 1
 
-  " Autocompletion
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    let g:deoplete#enable_at_startup = 1 " Use deoplete
-    let g:python3_host_prog = expand('~/.asdf/shims/python3')
-    inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
-
   " Git
   Plug 'tpope/vim-fugitive'
 
@@ -99,7 +93,6 @@ call plug#end()
 
 filetype plugin indent on
 let g:ruby_host_prog = expand('~/.asdf/shims/ruby')
-call deoplete#custom#option('sources', { '_': ['ale'], })
 
 " Leader
 let g:mapleader=' '
@@ -164,10 +157,6 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 
 
 " ----- KEY MAPPINGS -----
-
-" Fix (deoplete) <C-c> escape doesn't trigger `InsertLeave` event
-" Still need this because `dd` is deleting two lines now
-inoremap <C-c> <Esc>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
