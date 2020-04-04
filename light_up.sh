@@ -47,7 +47,7 @@ ln -s ~/.dotfiles/git/.gitignore_global ~/.gitignore_global
 
 # Neovim config
 if [ ! -d ~/.config/nvim ]; then
-  mkdir ~/.config && mkdir ~/.config/nvim && ln -s ~/.dotfiles/editor/init.vim ~/.config/nvim/init.vim
+  mkdir -p ~/.config/nvim && ln -s ~/.dotfiles/editor/init.vim ~/.config/nvim/init.vim
 fi
 
 # Vim Plug (Neovim)
