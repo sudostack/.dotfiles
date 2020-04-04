@@ -48,9 +48,6 @@ call plug#begin('~/.config/nvim/plugged')
 
   Plug 'mattn/emmet-vim'
 
-  " Conquer of Completion (CoC) / language server support
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
   " Plugin for running linters (async)
   Plug 'neomake/neomake'
     autocmd! BufWritePost * Neomake
@@ -79,6 +76,13 @@ call plug#begin('~/.config/nvim/plugged')
     let g:vim_markdown_new_list_item_indent = 2 " Markdown default indentation
     let g:python_highlight_all = 1
 
+  " Autocompletion
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    let g:deoplete#enable_at_startup = 1 " Use deoplete
+    let g:python3_host_prog = expand('~/.asdf/shims/python3')
+    let g:ruby_host_prog = expand('~/.asdf/shims/ruby')
+    inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
+
   " Git
   Plug 'tpope/vim-fugitive'
 
@@ -91,8 +95,9 @@ call plug#end()
 
 " ----- SETTINGS -----
 
+call deoplete#custom#option('sources', { '_': ['ale'], })
+
 filetype plugin indent on
-let g:ruby_host_prog = expand('~/.asdf/shims/ruby')
 
 " Leader
 let g:mapleader=' '
