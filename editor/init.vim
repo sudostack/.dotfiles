@@ -67,8 +67,6 @@ call plug#begin('~/.config/nvim/plugged')
     let g:prettier#config#print_width = 120
     let g:prettier#config#bracket_spacing = 'true'
 
-  Plug 'rizzatti/dash.vim'
-
   " Commenting/uncommenting
   Plug 'scrooloose/nerdcommenter'
 
