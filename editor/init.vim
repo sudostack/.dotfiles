@@ -18,11 +18,14 @@ call plug#begin('~/.config/nvim/plugged')
   " Asynchronous Lint Engine for:
   " linting, fixing, completion, go to def, find ref, hover, symbol search
   Plug 'dense-analysis/ale'
-  let g:ale_fix_on_save = 1
-  let g:ale_fixers = {
-        \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-        \   'javascript': ['eslint'],
-        \}
+    let g:ale_fix_on_save = 1
+    let g:ale_fixers = {
+          \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+          \   'javascript': ['eslint'],
+          \}
+    let g:ale_linters = {
+          \ 'go': ['gopls'],
+          \}
 
   " editorconfig.org
   Plug 'editorconfig/editorconfig-vim'
@@ -48,7 +51,7 @@ call plug#begin('~/.config/nvim/plugged')
 
   Plug 'mattn/emmet-vim'
 
-  " Plugin for running linters (async)
+  " Async powers for Neovim
   Plug 'neomake/neomake'
     autocmd! BufWritePost * Neomake
 
@@ -57,11 +60,9 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd BufEnter * EnableStripWhitespaceOnSave
     let g:strip_whitespace_confirm=0
 
-  Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-  "\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+  Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
     autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
     let g:prettier#exec_cmd_async = 1
-    let g:prettier#autoformat = 0
     let g:prettier#autoformat = 0
     let g:prettier#config#print_width = 120
     let g:prettier#config#bracket_spacing = 'true'
