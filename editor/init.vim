@@ -81,6 +81,12 @@ call plug#begin('~/.config/nvim/plugged')
     let g:python3_host_prog = expand('~/.asdf/shims/python3')
     let g:ruby_host_prog = expand('~/.asdf/shims/ruby')
     inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
+  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'} " Golang autocmplete
+    let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+    let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+  Plug 'deoplete-plugins/deoplete-jedi'                " Python autocomplete
+  Plug 'fszymanski/deoplete-emoji'                     " Emojis (using colons, like Slack)
+  Plug 'slashmili/alchemist.vim'                       " Elixir autocomplete
 
   " Git
   Plug 'tpope/vim-fugitive'
