@@ -79,14 +79,14 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     let g:deoplete#enable_at_startup = 1 " Use deoplete
     let g:python3_host_prog = expand('~/.asdf/shims/python3')
-    let g:ruby_host_prog = expand('~/.asdf/shims/ruby')
+    let g:ruby_host_prog    = expand('~/.asdf/shims/ruby')
     inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
-  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'} " Golang autocmplete
+  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' } " Golang autocomplete
     let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-    let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-  Plug 'deoplete-plugins/deoplete-jedi'                " Python autocomplete
-  Plug 'fszymanski/deoplete-emoji'                     " Emojis (using colons, like Slack)
-  Plug 'slashmili/alchemist.vim'                       " Elixir autocomplete
+    let g:deoplete#sources#go#sort_class    = ['package', 'func', 'type', 'var', 'const']
+  Plug 'deoplete-plugins/deoplete-jedi' " Python autocomplete
+  Plug 'fszymanski/deoplete-emoji'      " Emojis (using colons, like Slack)
+  Plug 'slashmili/alchemist.vim'        " Elixir autocomplete
 
   " Git
   Plug 'tpope/vim-fugitive'
@@ -99,8 +99,6 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " ----- SETTINGS -----
-
-call deoplete#custom#option('sources', { '_': ['ale'], })
 
 filetype plugin indent on
 
