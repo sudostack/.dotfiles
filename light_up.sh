@@ -27,6 +27,9 @@ if ! which brew; then
   for utility in {asdf,ctags,direnv,fzf,gnupg,htop,nvim,ripgrep,tree}; do
     brew install "$utility";
   done
+
+  # Taps
+  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 else
   echo 'homebrew already installed'
 fi
