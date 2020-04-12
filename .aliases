@@ -1,3 +1,4 @@
 alias desk='cd ~/Desktop'
 alias dotfiles='cd ~/.dotfiles'
+alias gbc='git rev-parse --abbrev-ref HEAD'
 alias vim='nvim'
