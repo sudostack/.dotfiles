@@ -15,7 +15,7 @@ set -o errexit
 
 # SSH
 if [ ! -f ~/.ssh/id_rsa ]; then
-  ssh-keygen -t rsa -b 4096 -C "dwu207@gmail.com"
+  ssh-keygen -t rsa -b 4096 -C "wulymanmyth@gmail.com"
   ssh-add ~/.ssh/id_rsa
 else
   echo 'SSH key already exists'
