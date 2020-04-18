@@ -30,6 +30,8 @@ call plug#begin('~/.config/nvim/plugged')
   " editorconfig.org
   Plug 'editorconfig/editorconfig-vim'
 
+  Plug 'gleam-lang/gleam.vim'
+
   Plug 'godlygeek/tabular'
 
   " ripgrep
