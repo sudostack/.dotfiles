@@ -6,4 +6,5 @@
 .tool-versions-e
 __pycache__/
 node_modules/
+tags
 TAGS
