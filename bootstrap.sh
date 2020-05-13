@@ -15,7 +15,7 @@ set -o errexit
 
 # SSH
 if [ ! -f ~/.ssh/id_rsa ]; then
-  ssh-keygen -t rsa -b 4096 -C "$(hostname)"
+  ssh-keygen -t rsa -b 4096 -C "$(scutil --get ComputerName)"
   ssh-add ~/.ssh/id_rsa
 else
   echo 'SSH key already exists'
@@ -41,7 +41,7 @@ utilities=(
   nvim                                            # Neovim
   ripgrep                                         # Rust implementation of grep (faster than Ag aka the Silver Searcher)
   tree                                            # display directories as trees
-  universal-ctags/universal-ctags/universal-ctags # NOTE: may need to uninstall system version)
+  universal-ctags/universal-ctags/universal-ctags # NOTE: may need to uninstall system version
   wget                                            # Internet file retriever
 )
 for utility in "${utilities[@]}"; do
