@@ -1,3 +1,4 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export GOPATH=$HOME/Desktop/go
 export PATH=$PATH:$GOPATH/bin
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc

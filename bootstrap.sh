@@ -63,7 +63,7 @@ for cask in "${casks[@]}"; do
 done
 
 # dotfiles
-for file in ~/.dotfiles/.{bashrc,bash_profile,exports,aliases,functions,utilities}; do
+for file in ~/.dotfiles/.{bashrc,bash_profile,exports,aliases,functions,ripgreprc,utilities}; do
   if [[ ! -e "$file" ]]; then
     [ -r "$file" ] && [ -f "$file" ] && ln -s "$file" .;
   fi
