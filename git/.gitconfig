@@ -1,23 +1,30 @@
 [user]
-  email = wulymanmyth@gmail.com
-  name = David W
+  email = wulymanmyth (Gmail)
+  name = wulymammoth
 
 [alias]
-   # delete merged branches
+  # delete merged branches
   dmb = !sh -c 'git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d' -
-
-   # Clean deleted branches on remote
+  # copy current branch name
+  cb = rev-parse --abbrev-ref HEAD
+  # Clean deleted branches on remote
   rpo = remote prune origin
+
 [branch]
   autoSetupRebase = always
   sort = -authordate
+
 [core]
   excludesfile = ~/.gitignore_global
+
 [credential]
   helper = osxkeychain
+
 [grep]
   lineNumber = true
+
 [rerere]
   enabled = true
+
 [includeIf "gitdir:~/Desktop/work/"]
   path = ~/Desktop/work/.gitconfig
