@@ -38,6 +38,7 @@ call plug#begin('~/.config/nvim/plugged')
 
   " ripgrep
   Plug 'jremmen/vim-ripgrep'
+    let g:rg_command = 'rg --vimgrep -S'
     let g:rg_window_location = 'bot'
 
   Plug 'junegunn/vim-easy-align'
