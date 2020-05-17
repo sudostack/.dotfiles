@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/local/bin/bash
+# NOTE: this only works with Bash 4.0+ (instsall via Homebrew)
 
 : '
 RESOURCES:
@@ -8,84 +9,104 @@ RESOURCES:
 '
 
 # This will take care of two very common errors:
-# Referencing undefined variables (which default to "")
+# Referencing undefined variables (that default to "")
 # Ignoring failing commands
 set -o nounset
 set -o errexit
 
-# SSH
+echo -e '\n--- SSH ---'
 if [ ! -f ~/.ssh/id_rsa ]; then
+  echo 'setting up SSH key';
   ssh-keygen -t rsa -b 4096 -C "$(scutil --get ComputerName)"
   ssh-add ~/.ssh/id_rsa
 else
-  echo 'SSH key already exists'
+  echo 'SSH key already exists';
 fi
 
-# Homebrew
-if ! which brew; then
+echo -e '\n--- Homebrew ---'
+if ! command -v brew; then
+  echo 'installing Homebrew';
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
-  echo 'homebrew already installed'
+  echo 'Homebrew already installed';
 fi
 
+echo -e '\n--- utilities (via Homebrew) ---';
+declare -A utilities
 utilities=(
-  asdf                                            # language version manager (one to rule them all)
-  bash-completion                                 # unlike zsh (does not come out of the box)
-  direnv                                          # manage per-directory environment variables
-  fzf                                             # command-line fuzzy finder
-  github/gh/gh                                    # GitHub CLI
-  glow                                            # markdown reader
-  gnupg                                           # free OpenPGP (pretty good privacy standard)
-  htop                                            # improved top (interactive process viewer)
-  jq                                              # command-line JSON processor
-  nvim                                            # Neovim
-  ripgrep                                         # Rust implementation of grep (faster than Ag aka the Silver Searcher)
-  tree                                            # display directories as trees
-  universal-ctags/universal-ctags/universal-ctags # NOTE: may need to uninstall system version
-  wget                                            # Internet file retriever
+  ['asdf']=             # language version manager (one to rule them all)
+  ['ctags']='universal-ctags/universal-ctags/universal-ctags'
+  ['direnv']=           # manage per-directory environment variables
+  ['fzf']=              # command-line fuzzy finder
+  ['gh']='github/gh/gh' # GitHub CLI
+  ['glow']=             # markdown reader
+  ['gpg-agent']='gnupg' # GNU (Pretty Good Privacy)
+  ['htop']=             # improved top (interactive process viewer)
+  ['jq']=               # command-line JSON processor
+  ['nvim']=             # Neovim
+  ['rg']='ripgrep'      # Rust implementation of grep (faster than Ag aka the Silver Searcher)
+  ['tree']=             # display directories as trees
+  ['wget']=             # Internet file retriever
 )
-for utility in "${utilities[@]}"; do
-  if ! which "$utility"; then
-    echo "installing: ${utility}";
-    brew install "$utility";
+for cmd in ${!utilities[@]}; do
+  formula=${utilities[${cmd}]};
+  if ! command -v "$cmd"; then
+    echo "installing: ${cmd}";
+    if [ "${#formula}" > 0 ]; then brew install "$formula"; else brew install "$cmd"; fi
+  else
+    echo "${cmd} already installed";
   fi
 done
 
-# Homebrew casks
+echo -e '\n--- (cask) utilities (via Homebrew) ---';
 casks=(
   ngrok
 )
 for cask in "${casks[@]}"; do
-  if ! which "$cask"; then
+  if ! command -v "$cask"; then
     echo "installing: ${cask}";
     brew cask install "$cask";
+  else
+    echo "${cask} already installed";
   fi
 done
 
-# dotfiles
-for file in ~/.dotfiles/.{bashrc,bash_profile,exports,aliases,functions,ripgreprc,utilities}; do
-  if [[ ! -e "$file" ]]; then
-    [ -r "$file" ] && [ -f "$file" ] && ln -s "$file" .;
+echo -e '\n--- linking dotfiles ---';
+dotfiles=(
+  aliases
+  bash_profile
+  bashrc
+  exports
+  functions
+  gitconfig
+  gitignore_global
+  ripgreprc
+  utilities
+)
+for dotfile in "${dotfiles[@]}"; do
+  if [ -r "$dotfile" ] && [ -f "$dotfile" ]; then # readable and is file (options)
+    echo "linking ${dotfile}";
+    ln -s "$dotfile" "$HOME/.${dotfile}".;
+  else
+    echo "${dotfile} already linked"
   fi
 done
 
-# Git
-for file in ~/.dotfiles/git/.{gitconfig,gitignore_global}; do
-  if [[ ! -e "$file" ]]; then
-    echo "copying: ${file}";
-    [ -r "$file" ] && [ -f "$file" ] && ln -s "$file" .;
-  fi
-done
-
-# Neovim config
-if [[ ! -d ~/.config/nvim ]]; then
-  echo 'copying neovim config';
-  mkdir -p ~/.config/nvim && ln -s ~/.dotfiles/editor/init.vim ~/.config/nvim/init.vim
-fi
-
-# vim-plug
+echo -e '\n--- checking for vim-plug ---';
 if [[ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]]; then
   echo 'installing vim-plug';
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim \
     --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+else
+  echo 'vim-plug already installed';
 fi
+
+echo -e '\n--- checking Neovim config ---'
+if [[ ! -d ~/.config/nvim ]]; then # directory exists
+  echo 'linking Neovim config';
+  mkdir -p ~/.config/nvim && ln -s ~/.dotfiles/editor/init.vim ~/.config/nvim/init.vim
+else
+  echo 'Neovim config already linked';
+fi
+
+echo -e '\n--- BOOSTRAPPING FINISHED ---'
