@@ -61,6 +61,7 @@ done
 echo -e '\n--- (cask) utilities (via Homebrew) ---';
 casks=(
   ngrok
+  rectangle
 )
 for cask in "${casks[@]}"; do
   if ! command -v "$cask"; then
