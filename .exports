@@ -5,6 +5,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # do not record commands that begin with pressing up/down or space
 export HISTCONTROL=ignoreboth:erasedups
 export HISTFILESIZE= # unlimited
+export HISTIGNORE='*personal*'
 export HISTSIZE=     # unlimited
 
 ## neovim
