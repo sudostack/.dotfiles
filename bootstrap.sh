@@ -81,6 +81,7 @@ dotfiles=(
   functions
   gitconfig
   gitignore_global
+  inputrc
   ripgreprc
   utilities
 )
