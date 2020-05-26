@@ -1,13 +1,4 @@
-# EDITOR
-export EDITOR=nvim
+shopt -s histappend # append to history on exit
 
-# HISTORY
-HISTCONTROL=ignoredups:erasedups
-HISTFILESIZE=
-HISTSIZE=
-
-# When the shell exits, append to the history file instead of overwriting it
-shopt -s histappend
-
-# PROMPT
+## PROMPT
 PS1="\W $ "

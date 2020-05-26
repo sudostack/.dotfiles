@@ -1,4 +1,18 @@
+## bash-specific
 export BASH_SILENCE_DEPRECATION_WARNING=1
+# HISTORY
+# erasedups all previous  lines  matching  the  current remove before save
+# do not record commands that begin with pressing up/down or space
+export HISTCONTROL=ignoreboth:erasedups
+export HISTFILESIZE= # unlimited
+export HISTSIZE=     # unlimited
+
+## neovim
+export EDITOR=nvim
+
+## languages/platforms
 export GOPATH=$HOME/Desktop/go
 export PATH=$PATH:$GOPATH/bin
+
+## utilities
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
