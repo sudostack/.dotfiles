@@ -185,8 +185,3 @@ nmap <Leader>pf :FZF<CR>
 nmap <Leader>/ :Rg<SPACE>
 " Search for word under visual selection
 vnoremap <Leader>/ y:Rg <C-r>=fnameescape(@")<CR><CR>
-
-" Open NERDtree
-"map <C-n> :NERDTreeToggle<CR>
-" Show current buffer in NERDtree
-"nmap <C-m> :NERDTreeFind<CR>
