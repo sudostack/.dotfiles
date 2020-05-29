@@ -63,8 +63,8 @@ call plug#begin('~/.config/nvim/plugged')
     autocmd BufEnter * EnableStripWhitespaceOnSave
     let g:strip_whitespace_confirm=0
 
-  Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
-    autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+  Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql'] }
+    autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.vue PrettierAsync
     let g:prettier#exec_cmd_async = 1
     let g:prettier#autoformat = 0
     let g:prettier#config#print_width = 120
@@ -89,6 +89,7 @@ call plug#begin('~/.config/nvim/plugged')
     let g:deoplete#sources#go#sort_class    = ['package', 'func', 'type', 'var', 'const']
   Plug 'deoplete-plugins/deoplete-jedi' " Python autocomplete
   Plug 'fszymanski/deoplete-emoji'      " Emojis (using colons, like Slack)
+
   Plug 'slashmili/alchemist.vim'        " Elixir autocomplete
 
   " Git
