@@ -30,8 +30,6 @@ call plug#begin('~/.config/nvim/plugged')
   " editorconfig.org
   Plug 'editorconfig/editorconfig-vim'
 
-  Plug 'evanleck/vim-svelte'
-
   Plug 'gleam-lang/gleam.vim'
 
   Plug 'godlygeek/tabular'
