@@ -2,7 +2,7 @@
 
 call plug#begin('~/.config/nvim/plugged')
   " Themes
-  Plug 'mhartington/oceanic-next'
+  Plug 'arcticicestudio/nord-vim'
 
   " Git diffing
   Plug 'airblade/vim-gitgutter'
@@ -98,9 +98,6 @@ call plug#begin('~/.config/nvim/plugged')
 
   Plug 'tpope/vim-surround'
 
-  Plug 'vim-airline/vim-airline-themes'
-    let g:airline_theme='oceanicnext'
-
 call plug#end()
 
 " ----- SETTINGS -----
@@ -154,7 +151,7 @@ set t_Co=256                " Moar colors
 
 syntax enable
 set background=dark
-colorscheme OceanicNext
+colorscheme nord
 
 " Line widths
 "autocmd FileType elixir set textwidth=120
