@@ -90,8 +90,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'deoplete-plugins/deoplete-jedi' " Python autocomplete
   Plug 'fszymanski/deoplete-emoji'      " Emojis (using colons, like Slack)
 
-  Plug 'slashmili/alchemist.vim'        " Elixir autocomplete
-
   " Git
   Plug 'tpope/vim-fugitive'
 
