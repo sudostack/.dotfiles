@@ -15,22 +15,8 @@ call plug#begin('~/.config/nvim/plugged')
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline_powerline_fonts = 1
 
-  " Asynchronous Lint Engine for:
-  " linting, fixing, completion, go to def, find ref, hover, symbol search
-  Plug 'dense-analysis/ale'
-    let g:ale_fix_on_save = 1
-    let g:ale_fixers = {
-          \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-          \   'javascript': ['eslint'],
-          \}
-    let g:ale_linters = {
-          \ 'go': ['gopls'],
-          \}
-
   " editorconfig.org
   Plug 'editorconfig/editorconfig-vim'
-
-  Plug 'gleam-lang/gleam.vim'
 
   Plug 'godlygeek/tabular'
 
@@ -48,15 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf.vim'
     let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
-  " Manage tag files (ctags)
-  Plug 'ludovicchabant/vim-gutentags'
-    let g:gutentags_cache_dir = '~/.tags_cache'
-
   Plug 'mattn/emmet-vim'
-
-  " Async powers for Neovim
-  Plug 'neomake/neomake'
-    autocmd! BufWritePost * Neomake
 
   " Disable the confirmation
   Plug 'ntpeters/vim-better-whitespace'
@@ -78,22 +56,8 @@ call plug#begin('~/.config/nvim/plugged')
     let g:vim_markdown_new_list_item_indent = 2 " Markdown default indentation
     let g:python_highlight_all = 1
 
-  " Autocompletion
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    let g:deoplete#enable_at_startup = 1 " Use deoplete
-    let g:python3_host_prog = expand('~/.asdf/shims/python3')
-    let g:ruby_host_prog    = expand('~/.asdf/shims/ruby')
-    inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<tab>"
-  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' } " Golang autocomplete
-    let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-    let g:deoplete#sources#go#sort_class    = ['package', 'func', 'type', 'var', 'const']
-  Plug 'deoplete-plugins/deoplete-jedi' " Python autocomplete
-  Plug 'fszymanski/deoplete-emoji'      " Emojis (using colons, like Slack)
-
   " Git
   Plug 'tpope/vim-fugitive'
-
-  Plug 'tpope/vim-surround'
 
 call plug#end()
 
