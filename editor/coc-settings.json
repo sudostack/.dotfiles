@@ -1,0 +1,25 @@
+{
+  "codeLens.enable": true,
+  "languageserver": {
+    "elixirLS": {
+      "command": "/Users/davidwu/Desktop/autodidact/elixir/elixir_ls/language_server.sh",
+      "filetypes": ["elixir", "eelixir"]
+    },
+    "go": {
+      "command": "gopls",
+      "args": ["serve", "-debug", "0.0.0.0:8484", "-rpc.trace"],
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  },
+  "solargraph.commandPath": "/Users/davidwu/.asdf/shims/solargraph",
+  "solargraph.promptDownload": true,
+  "solargraph.diagnostics": true,
+  "solargraph.completion": true,
+  "solargraph.formatting": true,
+  "solargraph.definitions": true,
+  "solargraph.references": true,
+  "solargraph.folding": true,
+  "solargraph.userBundler": false
+}
