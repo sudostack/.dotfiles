@@ -2,7 +2,7 @@
   "codeLens.enable": true,
   "languageserver": {
     "elixirLS": {
-      "command": "/Users/davidwu/Desktop/autodidact/elixir/elixir_ls/language_server.sh",
+      "command": "~/.elixir/elixir_ls/language_server.sh",
       "filetypes": ["elixir", "eelixir"]
     },
     "go": {
@@ -13,7 +13,7 @@
       "filetypes": ["go"]
     }
   },
-  "solargraph.commandPath": "/Users/davidwu/.asdf/shims/solargraph",
+  "solargraph.commandPath": "~/.asdf/shims/solargraph",
   "solargraph.promptDownload": true,
   "solargraph.diagnostics": true,
   "solargraph.completion": true,
