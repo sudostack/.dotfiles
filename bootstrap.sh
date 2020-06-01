@@ -106,7 +106,7 @@ fi
 echo -e '\n--- checking Neovim config ---'
 if [[ ! -d ~/.config/nvim ]]; then # directory exists
   echo 'linking Neovim config';
-  mkdir -p ~/.config/nvim && ln -s ~/.dotfiles/editor/init.vim ~/.config/nvim/init.vim
+  mkdir -p ~/.config/nvim && ln -s ~/.dotfiles/neovim/init.vim ~/.config/nvim/init.vim
 else
   echo 'Neovim config already linked';
 fi
