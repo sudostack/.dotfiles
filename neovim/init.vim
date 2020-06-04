@@ -4,11 +4,16 @@ source $HOME/.dotfiles/neovim/language-settings.vim
 source $HOME/.dotfiles/neovim/plugins.vim
 
 " ----- SETTINGS -----
-autocmd FocusGained * :checktime " ^ required for `set autoread` and `set autoindent`
+autocmd FocusGained * :checktime " required for `set autoread` and `set autoindent`
 
 colorscheme nord
 
 filetype plugin indent on " detection for filetype plugin and indentation
+
+" netrw settings
+let g:netrw_browse_split = 2  " open in new vertical split
+let g:netrw_liststyle    = 3  " tree style listing
+let g:netrw_winsize      = 25 " netrw window size (percentage)
 
 set autoindent              " Use previous line indent for newly created line
 set autoread                " Reload file when modified by external application
@@ -47,4 +52,5 @@ set tabstop=2               " Render TABs using n number of spaces
 set tags=tags,./tags,$HOME/tags
 set termguicolors
 set title                   " Set the title of the iTerm tab
+
 syntax enable
