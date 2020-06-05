@@ -14,7 +14,6 @@ filetype plugin indent on " detection for filetype plugin and indentation
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden' " use ripgrep as the default searcher
 
 " netrw settings
-let g:netrw_browse_split = 2  " open in new vertical split
 let g:netrw_liststyle    = 3  " tree style listing
 let g:netrw_winsize      = 25 " netrw window size (percentage)
 
