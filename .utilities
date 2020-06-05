@@ -1,5 +1,3 @@
-## UTILITIES
-
 # asdf
 . $(brew --prefix asdf)/asdf.sh
 . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
@@ -20,6 +18,3 @@ eval "$(direnv hook bash)"
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# homebrew
-HOMEBREW_PREFIX=$(brew --prefix)

@@ -8,6 +8,9 @@ export HISTFILESIZE= # unlimited
 export HISTIGNORE='*personal*'
 export HISTSIZE=     # unlimited
 
+# homebrew
+HOMEBREW_PREFIX=$(brew --prefix)
+
 ## neovim
 export EDITOR=nvim
 
