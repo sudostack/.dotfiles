@@ -4,14 +4,7 @@
 . $(brew --prefix asdf)/asdf.sh
 . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
-# direnv
-eval "$(direnv hook bash)"
-
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# homebrew
-HOMEBREW_PREFIX=$(brew --prefix)
+# bash completion
 if type brew &>/dev/null; then
   if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
     source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
@@ -21,3 +14,12 @@ if type brew &>/dev/null; then
     done
   fi
 fi
+
+# direnv
+eval "$(direnv hook bash)"
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# homebrew
+HOMEBREW_PREFIX=$(brew --prefix)
