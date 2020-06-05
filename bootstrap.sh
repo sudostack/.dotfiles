@@ -34,6 +34,7 @@ fi
 echo -e '\n--- utilities (via Homebrew) ---';
 declare -A utilities
 utilities=(
+  ['darksky-weather']=  # weather
   ['asdf']=             # language version manager (one to rule them all)
   ['ctags']='universal-ctags/universal-ctags/universal-ctags'
   ['direnv']=           # manage per-directory environment variables
