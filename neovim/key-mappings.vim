@@ -1,22 +1,37 @@
-" Leader
+" == LEADER ==
 let g:mapleader=' '
 let mapleader=' '
 
-" Start interactive EasyAlign in visual mode (e.g. vipga)
+" == easy align ==
+"
+" start interactive easyalign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+" start interactive easyalign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" File name
+" == file paths ==
+"
+" copy file name
 nmap <Leader>fn :let @*=expand("%") <bar> :echo @*<CR>
-" File relative path
+" copy file relative path
 nmap <Leader>fy :let @*=expand("%p") <bar> :echo @*<CR>
-" File full path
+" copy file full path
 nmap <Leader>ffy :let @*=expand("%:p") <bar> :echo @*<CR>
 
-" Fuzzy finder
+" == fzf ==
+"
 nmap <Leader>pf :FZF<CR>
-" ripgrep
+
+" == ripgrep ==
+"
 nmap <Leader>/ :Rg<SPACE>
-" Search for word under visual selection
+" search for word under visual selection
 vnoremap <Leader>/ y:Rg <C-r>=fnameescape(@")<CR><CR>
+
+" == vim-test ==
+"
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
