@@ -4,7 +4,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # erasedups all previous  lines  matching  the  current remove before save
 # do not record commands that begin with pressing up/down or space
 export HISTCONTROL=ignoreboth:erasedups
-export HISTFILESIZE= # unlimited
+export HISTFILESIZE=10000
 export HISTIGNORE='*personal*'
 export HISTSIZE=     # unlimited
 
