@@ -8,6 +8,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/vim-easy-align'
+  Plug 'ludovicchabant/vim-gutentags'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'ntpeters/vim-better-whitespace'
