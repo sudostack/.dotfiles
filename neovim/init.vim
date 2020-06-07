@@ -71,6 +71,7 @@ set shiftwidth=2            " Indentation amount for < and > commands
 set showcmd                 " Show (partial) command in status line
 set showmatch               " Show matching brackets
 set smartcase               " Searching with capital letters
+set smartindent
 set smarttab
 set softtabstop=2
 set tabstop=2               " Render TABs using n number of spaces
