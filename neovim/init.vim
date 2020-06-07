@@ -44,7 +44,7 @@ set autoindent                          " Use previous line indent for newly cre
 set autoread                            " Reload file when modified by external application
 set background=dark
 set cindent
-set clipboard=unnamed                   " Copy to system clipboard
+set clipboard+=unnamedplus              " To ALWAYS use the clipboard for ALL operations (instead of registers)
 set completeopt=longest,menuone,preview
 set copyindent
 set cursorline                          " Highlight cursor position (row/line)
@@ -64,8 +64,7 @@ set noswapfile                          " Don't make backups before overwriting
 set number                              " Always show line numbers
 set relativenumber                      " Always show line numbers
 set rtp+=/usr/local/bin/fzf             " real-time path (For fzf)
-set ruler                               " Show the line and column numbers
-set shell=zsh                           " Show (partial) command in status line
+set ruler                               " Show the line and column number of the cursor position
 set shiftround
 set shiftwidth=2                        " Indentation amount for < and > commands
 set showcmd                             " Show (partial) command in status line
