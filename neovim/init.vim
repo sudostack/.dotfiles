@@ -1,5 +1,6 @@
 source $HOME/.dotfiles/neovim/coc-settings.vim
 source $HOME/.dotfiles/neovim/key-mappings.vim
+source $HOME/.dotfiles/neovim/functions.vim " (must come after key-mappings)
 source $HOME/.dotfiles/neovim/language-settings.vim
 source $HOME/.dotfiles/neovim/plugins.vim
 
@@ -74,6 +75,7 @@ set smartindent
 set smarttab
 set softtabstop=2
 set spell spelllang=en_us
+set switchbuf=useopen,vsplit            " switch to already open buffer
 set tabstop=2                           " Render tabs using n number of spaces
 set tags=tags,./tags,$HOME/tags
 set termguicolors
