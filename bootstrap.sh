@@ -34,9 +34,9 @@ fi
 echo -e '\n--- utilities (via Homebrew) ---';
 declare -A utilities
 utilities=(
-  ['darksky-weather']=  # weather
   ['asdf']=             # language version manager (one to rule them all)
   ['ctags']='universal-ctags/universal-ctags/universal-ctags'
+  ['darksky-weather']=  # weather
   ['direnv']=           # manage per-directory environment variables
   ['fzf']=              # command-line fuzzy finder
   ['gh']='github/gh/gh' # GitHub CLI
@@ -48,6 +48,7 @@ utilities=(
   ['rg']='ripgrep'      # Rust implementation of grep (faster than Ag aka the Silver Searcher)
   ['tree']=             # display directories as trees
   ['wget']=             # Internet file retriever
+  ['wtfutil']= # The personal information dashboard for your terminal
 )
 for cmd in ${!utilities[@]}; do
   formula=${utilities[${cmd}]};
