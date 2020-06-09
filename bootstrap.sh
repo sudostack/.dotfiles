@@ -46,6 +46,7 @@ utilities=(
   ['jq']=               # command-line JSON processor
   ['nvim']=             # Neovim
   ['rg']='ripgrep'      # Rust implementation of grep (faster than Ag aka the Silver Searcher)
+  ['tmux'] # terminal multiplexer
   ['tree']=             # display directories as trees
   ['wget']=             # Internet file retriever
   ['wtfutil']= # The personal information dashboard for your terminal
