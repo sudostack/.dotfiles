@@ -18,3 +18,29 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'vim-test/vim-test'
 call plug#end()
+
+" fzf.vim
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden' " use ripgrep as the default searcher
+
+" vim-airline
+let g:airline#extensions#tabline#enabled      = 1
+let g:airline#extensions#tabline#formatter    = 'short_path'
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_sep     = ' '
+let g:airline_powerline_fonts                 = 1
+
+" vim-better-whitespace
+let g:better_whitespace_enabled             = 0
+let g:current_line_whitespace_disabled_hard = 1
+let g:strip_whitespace_confirm              = 0
+let g:strip_whitespace_on_save              = 1
+
+" vim-polyglot
+let g:vim_markdown_new_list_item_indent = 2 " Markdown default indentation
+
+" vim-prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.vue PrettierAsync
+let g:prettier#autoformat             = 0
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#print_width     = 120
+let g:prettier#exec_cmd_async         = 1
