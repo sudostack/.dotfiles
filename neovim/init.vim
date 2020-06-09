@@ -41,6 +41,7 @@ let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#print_width     = 120
 let g:prettier#exec_cmd_async         = 1
 
+set autochdir                           " automatically change working directory to location of current file
 set autoindent                          " Use previous line indent for newly created line
 set autoread                            " Reload file when modified by external application
 set background=dark
