@@ -1,6 +1,5 @@
 source $HOME/.dotfiles/neovim/coc-settings.vim
 source $HOME/.dotfiles/neovim/key-mappings.vim
-source $HOME/.dotfiles/neovim/functions.vim " (must come after key-mappings)
 source $HOME/.dotfiles/neovim/language-settings.vim
 source $HOME/.dotfiles/neovim/plugins.vim
 

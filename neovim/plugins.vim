@@ -19,26 +19,44 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-test/vim-test'
 call plug#end()
 
-" fzf.vim
+" ----- fzf.vim -----
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden' " use ripgrep as the default searcher
 
-" vim-airline
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader><Enter> :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
+
+" ----- vim-airline -----
 let g:airline#extensions#tabline#enabled      = 1
 let g:airline#extensions#tabline#formatter    = 'short_path'
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep     = ' '
 let g:airline_powerline_fonts                 = 1
 
-" vim-better-whitespace
+" ----- vim-better-whitespace -----
 let g:better_whitespace_enabled             = 0
 let g:current_line_whitespace_disabled_hard = 1
 let g:strip_whitespace_confirm              = 0
 let g:strip_whitespace_on_save              = 1
 
-" vim-polyglot
+" ----- vim-polyglot -----
 let g:vim_markdown_new_list_item_indent = 2 " Markdown default indentation
 
-" vim-prettier
+" ----- vim-prettier -----
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.vue PrettierAsync
 let g:prettier#autoformat             = 0
 let g:prettier#config#bracket_spacing = 'true'
