@@ -5,8 +5,7 @@ source $HOME/.dotfiles/neovim/language-settings.vim
 source $HOME/.dotfiles/neovim/plugins.vim
 
 " ----- SETTINGS -----
-autocmd BufEnter * silent! lcd %:p:h " 'like' cd (locally) change working directory to current file path
-autocmd FocusGained * :checktime     " check if buffers changed outside of vim - required for `set autoread` and `set autoindent`
+autocmd FocusGained * :checktime " check if buffers changed outside of vim - required for `set autoread` and `set autoindent`
 
 colorscheme nord
 
@@ -16,7 +15,6 @@ filetype plugin indent on " detection for filetype plugin and indentation
 let g:netrw_liststyle = 3  " tree style listing
 let g:netrw_winsize   = 25 " netrw window size (percentage)
 
-set autochdir                           " automatically change working directory to location of current file
 set autoindent                          " Use previous line indent for newly created line
 set autoread                            " Reload file when modified by external application
 set background=dark
