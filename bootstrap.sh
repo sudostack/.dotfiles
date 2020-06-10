@@ -115,4 +115,4 @@ else
   echo 'Neovim config already linked';
 fi
 
-echo -e '\n--- BOOSTRAPPING FINISHED ---'
+echo -e '\n--- BOOTSTRAPPING FINISHED ---'
