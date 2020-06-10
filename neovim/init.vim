@@ -50,7 +50,9 @@ set softtabstop=2
 set switchbuf=useopen,vsplit            " switch to already open buffer
 set tabstop=2                           " Render tabs using n number of spaces
 set tags=tags,./tags,$HOME/tags
-set termguicolors
+if (empty($TMUX) && has('termguicolors'))
+  set termguicolors
+endif
 set title                               " Set the title of the iTerm tab
 
 syntax enable
