@@ -63,6 +63,7 @@ done
 
 echo -e '\n--- (cask) utilities (via Homebrew) ---';
 casks=(
+  alacritty
   joplin
   ngrok
   rectangle
