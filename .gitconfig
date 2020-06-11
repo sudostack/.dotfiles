@@ -1,7 +1,3 @@
-[user]
-  email = wulymanmyth (Gmail)
-  name = wulymammoth
-
 [alias]
   # delete merged branches
   dmb = !sh -c 'git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d' -
@@ -23,8 +19,12 @@
 [grep]
   lineNumber = true
 
+[includeIf "gitdir:~/Desktop/work/"]
+  path = ~/Desktop/work/.gitconfig
+
 [rerere]
   enabled = true
 
-[includeIf "gitdir:~/Desktop/work/"]
-  path = ~/Desktop/work/.gitconfig
+[user]
+  email = wulymanmyth (Gmail)
+  name = wulymammoth
