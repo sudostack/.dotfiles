@@ -16,6 +16,7 @@ autocmd filetype markdown,md set spell spelllang=en_us
 " python
 autocmd Filetype python inoremap # X<C-h>#
 let g:python3_host_prog = expand('~/.asdf/shims/python3')
+let g:python2_host_prog = expand('~/.asdf/shims/python')
 
 " ruby
 let g:ruby_host_prog    = expand('~/.asdf/shims/ruby')
