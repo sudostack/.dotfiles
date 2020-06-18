@@ -82,6 +82,7 @@ dotfiles=(
   aliases
   bash_profile
   bashrc
+  dir_colors
   exports
   functions
   gitconfig
