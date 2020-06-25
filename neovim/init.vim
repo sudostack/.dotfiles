@@ -10,9 +10,6 @@ colorscheme nord
 
 filetype plugin indent on " detection for filetype plugin and indentation
 
-" netrw settings
-let g:netrw_liststyle = 3  " tree style listing
-
 set autoindent              " Use previous line indent for newly created line
 set autoread                " Reload file when modified by external application
 set background=dark
