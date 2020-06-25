@@ -23,6 +23,7 @@ set expandtab               " Insert space chars for TAB
 set fileencoding=utf-8
 set hidden                  " Avoid persisting closed buffers
 set ignorecase              " Case-insensitive searches
+set inccommand=split        " Shows the effects of a command incrementally, as you type
 set incsearch               " Incremental highlighting while searching
 set lazyredraw              " Aid in slow redrawing because of 'cursorline'
 set linespace=1             " Line spacing
