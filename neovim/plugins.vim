@@ -19,6 +19,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-test/vim-test'
 call plug#end()
 
+" ----- easy-align -----
+" start interactive easyalign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" start interactive easyalign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 " ----- fzf.vim -----
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden' " use ripgrep as the default searcher
 
@@ -33,12 +39,19 @@ function! s:bufopen(e)
   execute 'buffer' matchstr(a:e, '^[ 0-9]*')
 endfunction
 
+nmap <Leader>pf :FZF<CR>
+
 nnoremap <silent> <Leader><Enter> :call fzf#run({
 \   'source':  reverse(<sid>buflist()),
 \   'sink':    function('<sid>bufopen'),
 \   'options': '+m',
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
+
+" ----- ripgrep -----
+nmap <Leader>/ :Rg<SPACE>
+" search for word under visual selection
+vnoremap <Leader>/ y:Rg <C-r>=fnameescape(@")<CR><CR>
 
 " ----- vim-airline -----
 let g:airline#extensions#tabline#enabled      = 1
@@ -62,3 +75,10 @@ let g:prettier#autoformat             = 0
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#print_width     = 120
 let g:prettier#exec_cmd_async         = 1
+
+" ----- vim-test -----
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
