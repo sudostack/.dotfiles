@@ -7,6 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/goyo.vim'
   Plug 'junegunn/vim-easy-align'
   Plug 'ludovicchabant/vim-gutentags'
   Plug 'mattn/emmet-vim'
