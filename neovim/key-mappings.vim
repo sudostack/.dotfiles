@@ -1,6 +1,8 @@
 " ----- LEADER -----
-let g:mapleader=' '
-let mapleader=' '
+let g:mapleader="\<Space>"
+let g:maplocalleader = ","
+let localleader=","
+let mapleader="\<Space>"
 
 " ----- file paths -----
 " copy file name
