@@ -5,5 +5,7 @@ test -r "~/.dir_colors" && eval $(gdircolors ~/.dir_colors)
 
 # PROMPT
 source ~/.dotfiles/git-prompt.sh
+GIT_PS1_COMPRESSSPARSESTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
-export PROMPT_COMMAND='__git_ps1 "\W" "\\\$ "'
+GIT_PS1_SHOWDIRTYSTATE=true
+PROMPT_COMMAND='__git_ps1 "\W" "\\\$ "'
