@@ -18,7 +18,7 @@ echo -e '\n--- SSH ---'
 if [ ! -f ~/.ssh/id_rsa ]; then
   echo 'setting up SSH key';
   ssh-keygen -t rsa -b 4096 -C "$(scutil --get ComputerName)"
-  ssh-add ~/.ssh/id_rsa
+  ssh-add -K ~/.ssh/id_rsa
 else
   echo 'SSH key already exists';
 fi
