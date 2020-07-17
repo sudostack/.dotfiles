@@ -2,8 +2,6 @@
 .envrc
 .tags
 .tags_sorted_by_file
-.tool-versions
-.tool-versions-e
 __pycache__/
 node_modules/
 tags
