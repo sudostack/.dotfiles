@@ -28,7 +28,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " ----- fzf.vim -----
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden' " use ripgrep as the default searcher
+let $FZF_DEFAULT_COMMAND = 'rg --files' " use ripgrep as the default searcher
 
 function! s:buflist()
   redir => ls
