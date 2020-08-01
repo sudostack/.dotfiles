@@ -49,6 +49,9 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
 
+" ----- goyo -----
+let g:goyo_width = 120
+
 " ----- ripgrep -----
 nmap <Leader>/ :Rg<SPACE>
 " search for word under visual selection
