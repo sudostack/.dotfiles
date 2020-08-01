@@ -50,7 +50,9 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 \ })<CR>
 
 " ----- goyo -----
-let g:goyo_width = 120
+let g:goyo_height = 100
+let g:goyo_linenr = 1
+let g:goyo_width  = 120
 
 " ----- ripgrep -----
 nmap <Leader>/ :Rg<SPACE>
