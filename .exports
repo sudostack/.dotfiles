@@ -17,8 +17,9 @@ HOMEBREW_PREFIX=$(brew --prefix)
 export EDITOR=nvim
 
 ## languages/platforms
+export CARGOBINS_PATH=$HOME/.cargo/bin
 export GOPATH=$HOME/Desktop/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$CARGOBINS_PATH:$GOPATH/bin
 
 ## utilities
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
