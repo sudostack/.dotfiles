@@ -1,6 +1,7 @@
 # asdf
-. $(brew --prefix asdf)/asdf.sh
-. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+BREW_PREFIX=/usr/local/opt # because $(brew --prefix asdf) is SLOW AS SHIT
+. $BREW_PREFIX/asdf/asdf.sh
+. $BREW_PREFIX/asdf/etc/bash_completion.d/asdf.bash
 
 # bash completion
 if type brew &>/dev/null; then
