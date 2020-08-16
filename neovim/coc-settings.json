@@ -1,5 +1,6 @@
 {
   "codeLens.enable": true,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "jedi.enable": true,
   "jedi.startupMessage": true,
   "jedi.markupKindPreferred": "plaintext",
@@ -12,10 +13,6 @@
   "jedi.diagnostics.didChange": true,
   "jedi.diagnostics.didSave": true,
   "languageserver": {
-    "elixirLS": {
-      "command": "~/.elixir/elixir_ls/language_server.sh",
-      "filetypes": ["elixir", "eelixir"]
-    },
     "go": {
       "command": "gopls",
       "args": ["serve", "-debug", "0.0.0.0:8484", "-rpc.trace"],
