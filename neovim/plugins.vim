@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
+  Plug 'airblade/vim-rooter'
   Plug 'arcticicestudio/nord-vim'
   Plug 'bling/vim-airline'
   Plug 'editorconfig/editorconfig-vim'
