@@ -35,9 +35,10 @@ echo -e '\n--- utilities (via Homebrew) ---';
 declare -A utilities
 utilities=(
   ['asdf']=             # language version manager (one to rule them all)
+  ['bat']=              # cat alternative (rust)
   ['ctags']='universal-ctags/universal-ctags/universal-ctags'
-  ['darksky-weather']=  # weather
   ['direnv']=           # manage per-directory environment variables
+  ['fd']=               # fast alternative to find
   ['fzf']=              # command-line fuzzy finder
   ['gh']='github/gh/gh' # GitHub CLI
   ['glow']=             # markdown reader
@@ -46,10 +47,11 @@ utilities=(
   ['jq']=               # command-line JSON processor
   ['nvim']=             # Neovim
   ['rg']='ripgrep'      # Rust implementation of grep (faster than Ag aka the Silver Searcher)
-  ['tmux'] # terminal multiplexer
+  ['tmux']              # terminal multiplexer
   ['tree']=             # display directories as trees
   ['wget']=             # Internet file retriever
-  ['wtfutil']= # The personal information dashboard for your terminal
+  ['wtfutil']=          # The personal information dashboard for your terminal
+  ['zoxide']=           # faster way to navigate the filesystem (stack-based)
 )
 for cmd in ${!utilities[@]}; do
   formula=${utilities[${cmd}]};
