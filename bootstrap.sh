@@ -34,25 +34,27 @@ fi
 echo -e '\n--- utilities (via Homebrew) ---';
 declare -A utilities
 utilities=(
-  ['asdf']=             # language version manager (one to rule them all)
-  ['bat']=              # cat alternative (rust)
+  ['asdf']=                       # language version manager (one to rule them all)
+  ['bat']=                        # cat alternative (rust)
   ['ctags']='universal-ctags/universal-ctags/universal-ctags'
-  ['direnv']=           # manage per-directory environment variables
-  ['fd']=               # fast alternative to find
-  ['fzf']=              # command-line fuzzy finder
-  ['gh']='github/gh/gh' # GitHub CLI
-  ['glow']=             # markdown reader
-  ['gpg-agent']='gnupg' # GNU (Pretty Good Privacy)
-  ['htop']=             # improved top (interactive process viewer)
-  ['jq']=               # command-line JSON processor
-  ['neofetch']=         # command-line system info tool
-  ['nvim']=             # Neovim
-  ['rg']='ripgrep'      # Rust implementation of grep (faster than Ag aka the Silver Searcher)
-  ['tmux']              # terminal multiplexer
-  ['tree']=             # display directories as trees
-  ['wget']=             # Internet file retriever
-  ['wtfutil']=          # The personal information dashboard for your terminal
-  ['zoxide']=           # faster way to navigate the filesystem (stack-based)
+  ['direnv']=                     # manage per-directory environment variables
+  ['fd']=                         # fast alternative to find
+  ['fzf']=                        # command-line fuzzy finder
+  ['gh']='github/gh/gh'           # GitHub CLI
+  ['glow']=                       # markdown reader
+  ['gpg-agent']='gnupg'           # GNU (Pretty Good Privacy)
+  ['htop']=                       # improved top (interactive process viewer)
+  ['jq']=                         # command-line JSON processor
+  ['koekeishiya/formulae/skhd']=  # hotkey daemon for macOS
+  ['koekeishiya/formulae/yabai']= # tiling window manager
+  ['neofetch']=                   # command-line system info tool
+  ['nvim']=                       # Neovim
+  ['rg']='ripgrep'                # Rust implementation of grep (faster than Ag aka the Silver Searcher)
+  ['tmux']                        # terminal multiplexer
+  ['tree']=                       # display directories as trees
+  ['wget']=                       # Internet file retriever
+  ['wtfutil']=                    # The personal information dashboard for your terminal
+  ['zoxide']=                     # faster way to navigate the filesystem (stack-based)
 )
 for cmd in ${!utilities[@]}; do
   formula=${utilities[${cmd}]};
