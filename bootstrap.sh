@@ -45,6 +45,7 @@ utilities=(
   ['gpg-agent']='gnupg' # GNU (Pretty Good Privacy)
   ['htop']=             # improved top (interactive process viewer)
   ['jq']=               # command-line JSON processor
+  ['neofetch']=         # command-line system info tool
   ['nvim']=             # Neovim
   ['rg']='ripgrep'      # Rust implementation of grep (faster than Ag aka the Silver Searcher)
   ['tmux']              # terminal multiplexer
