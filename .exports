@@ -29,3 +29,5 @@ export PATH=$PATH:$CARGOBINS_PATH:$GOPATH/bin:$LLVM_PATH
 
 ## utilities
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+
+export XDG_CONFIG_HOME=$HOME/.config
