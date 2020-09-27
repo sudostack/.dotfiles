@@ -1,0 +1,9 @@
+always-display-description yes
+
+color background          white   black
+color listnormal          white   black
+color listfocus           white   black   bold
+color listnormal_unread   white   black
+color listfocus_unread    black   yellow   standout
+color info                black   blue     bold
+color article             white   black
