@@ -48,6 +48,7 @@ utilities=(
   ['koekeishiya/formulae/skhd']=  # hotkey daemon for macOS
   ['koekeishiya/formulae/yabai']= # tiling window manager
   ['neofetch']=                   # command-line system info tool
+  ['newsboat']=                   # RSS/Atom feed reader for text terminals
   ['nvim']=                       # Neovim
   ['rg']='ripgrep'                # Rust implementation of grep (faster than Ag aka the Silver Searcher)
   ['tmux']                        # terminal multiplexer
