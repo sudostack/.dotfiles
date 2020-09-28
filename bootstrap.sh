@@ -26,61 +26,11 @@ fi
 echo -e '\n--- Homebrew ---'
 if ! command -v brew; then
   echo 'installing Homebrew';
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)";
+  # brew install "mas-cli/tap/mas";
 else
   echo 'Homebrew already installed';
 fi
-
-echo -e '\n--- utilities (via Homebrew) ---';
-declare -A utilities
-utilities=(
-  ['asdf']=                       # language version manager (one to rule them all)
-  ['bat']=                        # cat alternative (rust)
-  ['ctags']='universal-ctags/universal-ctags/universal-ctags'
-  ['direnv']=                     # manage per-directory environment variables
-  ['fd']=                         # fast alternative to find
-  ['fzf']=                        # command-line fuzzy finder
-  ['gh']='github/gh/gh'           # GitHub CLI
-  ['glow']=                       # markdown reader
-  ['gpg-agent']='gnupg'           # GNU (Pretty Good Privacy)
-  ['htop']=                       # improved top (interactive process viewer)
-  ['jq']=                         # command-line JSON processor
-  ['koekeishiya/formulae/skhd']=  # hotkey daemon for macOS
-  ['koekeishiya/formulae/yabai']= # tiling window manager
-  ['neofetch']=                   # command-line system info tool
-  ['newsboat']=                   # RSS/Atom feed reader for text terminals
-  ['nvim']=                       # Neovim
-  ['rg']='ripgrep'                # Rust implementation of grep (faster than Ag aka the Silver Searcher)
-  ['tmux']                        # terminal multiplexer
-  ['tree']=                       # display directories as trees
-  ['wget']=                       # Internet file retriever
-  ['wtfutil']=                    # The personal information dashboard for your terminal
-  ['zoxide']=                     # faster way to navigate the filesystem (stack-based)
-)
-for cmd in ${!utilities[@]}; do
-  formula=${utilities[${cmd}]};
-  if ! command -v "$cmd"; then
-    echo "installing: ${cmd}";
-    if [ "${#formula}" > 0 ]; then brew install "$formula"; else brew install "$cmd"; fi
-  else
-    echo "${cmd} already installed";
-  fi
-done
-
-echo -e '\n--- (cask) utilities (via Homebrew) ---';
-casks=(
-  alacritty
-  ngrok
-  rectangle
-)
-for cask in "${casks[@]}"; do
-  if ! command -v "$cask"; then
-    echo "installing: ${cask}";
-    brew cask install "$cask";
-  else
-    echo "${cask} already installed";
-  fi
-done
 
 echo -e '\n--- linking dotfiles ---';
 dotfiles=(
