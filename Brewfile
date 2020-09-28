@@ -1,4 +1,4 @@
-## to instsall...
+## to install...
 ## $ brew bundle
 
 # brews
@@ -7,18 +7,19 @@ brew 'bat'                        # cat alternative (rust)
 brew 'direnv'                     # manage per-directory environment variables
 brew 'fd'                         # fast alternative to find
 brew 'fzf'                        # command-line fuzzy finder
-brew 'ghgithub/gh/gh'           # GitHub CLI
 brew 'github/gh/gh'
 brew 'glow'                       # markdown reader
-brew 'gnupg'           # GNU (Pretty Good Privacy)
+brew 'gnupg'                      # GNU (Pretty Good Privacy)
 brew 'htop'                       # improved top (interactive process viewer)
 brew 'hugo'                       # improved top (interactive process viewer)
 brew 'jq'                         # command-line JSON processor
 brew 'koekeishiya/formulae/skhd'  # hotkey daemon for macOS
 brew 'koekeishiya/formulae/yabai' # tiling window manager
 brew 'neofetch'                   # command-line system info tool
+brew 'newsboat'                   # RSS/Atom feed reader for text terminals
 brew 'nvim'                       # Neovim brew rgripgrep                # Rust implementation of grep (faster than Ag aka the Silver Searcher)
-brew 'tmux'                        # terminal multiplexer
+brew 'ripgrep'                    # Rust implementation of grep (faster than Ag aka the Silver Searcher)
+brew 'tmux'                       # terminal multiplexer
 brew 'tree'                       # display directories as trees
 brew 'universal-ctags/universal-ctags/universal-ctags'
 brew 'wget'                       # Internet file retriever
