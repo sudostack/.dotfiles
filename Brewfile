@@ -42,5 +42,5 @@ cask 'slack'
 cask 'spotify'
 
 # casks (fonts)
-cask 'font-hack-nerd-font'
+brew 'homebrew/cask-fonts/font-hack-nerd-font'
 cask 'font-meslo-for-powerline'
