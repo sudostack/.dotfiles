@@ -15,9 +15,10 @@ brew 'hugo'                       # improved top (interactive process viewer)
 brew 'jq'                         # command-line JSON processor
 brew 'koekeishiya/formulae/skhd'  # hotkey daemon for macOS
 brew 'koekeishiya/formulae/yabai' # tiling window manager
+brew 'lsd'                        # Clone of ls with colorful output, file type icons, and more
 brew 'neofetch'                   # command-line system info tool
 brew 'newsboat'                   # RSS/Atom feed reader for text terminals
-brew 'nvim'                       # Neovim brew rgripgrep                # Rust implementation of grep (faster than Ag aka the Silver Searcher)
+brew 'nvim'                       # NeoVim
 brew 'ripgrep'                    # Rust implementation of grep (faster than Ag aka the Silver Searcher)
 brew 'tmux'                       # terminal multiplexer
 brew 'tree'                       # display directories as trees
@@ -41,4 +42,5 @@ cask 'slack'
 cask 'spotify'
 
 # casks (fonts)
-cask 'homebrew/cask-fonts/font-meslo-for-powerline'
+cask 'font-hack-nerd-font'
+cask 'font-meslo-for-powerline'
