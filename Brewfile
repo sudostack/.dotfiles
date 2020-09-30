@@ -5,6 +5,7 @@
 brew 'asdf'                       # language version manager (one to rule them all)
 brew 'bat'                        # cat alternative (rust)
 brew 'direnv'                     # manage per-directory environment variables
+brew 'exa'                        # Modern replacement for 'ls'
 brew 'fd'                         # fast alternative to find
 brew 'fzf'                        # command-line fuzzy finder
 brew 'github/gh/gh'               # GitHub command-line tool
@@ -15,7 +16,6 @@ brew 'hugo'                       # improved top (interactive process viewer)
 brew 'jq'                         # command-line JSON processor
 brew 'koekeishiya/formulae/skhd'  # hotkey daemon for macOS
 brew 'koekeishiya/formulae/yabai' # tiling window manager
-brew 'lsd'                        # Clone of ls with colorful output, file type icons, and more
 brew 'neofetch'                   # command-line system info tool
 brew 'newsboat'                   # RSS/Atom feed reader for text terminals
 brew 'nvim'                       # NeoVim
