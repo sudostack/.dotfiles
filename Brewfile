@@ -8,7 +8,7 @@ brew 'direnv'                     # manage per-directory environment variables
 brew 'exa'                        # Modern replacement for 'ls'
 brew 'fd'                         # fast alternative to find
 brew 'fzf'                        # command-line fuzzy finder
-brew 'github/gh/gh'               # GitHub command-line tool
+brew 'gh'                         # GitHub command-line tool
 brew 'glow'                       # markdown reader
 brew 'gnupg'                      # GNU (Pretty Good Privacy)
 brew 'htop'                       # improved top (interactive process viewer)
