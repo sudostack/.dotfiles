@@ -18,6 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-obsession'
   Plug 'vim-test/vim-test'
 call plug#end()
 
