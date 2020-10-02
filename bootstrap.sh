@@ -43,6 +43,8 @@ dotfiles=(
   gitconfig
   gitignore_global
   ripgreprc
+  tmux.conf
+  tool-versions
   utilities
 )
 for dotfile in "${dotfiles[@]}"; do
