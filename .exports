@@ -9,6 +9,7 @@ export HISTCONTROL=ignoreboth:erasedups
 export HISTFILESIZE=10000
 export HISTIGNORE='&:ls:[bf]g:exit:pwd:clear:mount:umount' # :[ \t]* # space prefix ignores comment
 export HISTSIZE=     # unlimited
+export HISTTIMEFORMAT='%F '
 
 # bat (colorizing manual)
 export BAT_THEME="ansi-dark"
