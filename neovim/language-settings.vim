@@ -2,7 +2,7 @@
 autocmd FileType c setl tabstop=8 shiftwidth=4 softtabstop=4 noexpandtab
 
 " crontab
-autocmd filetype crontab setlocal nobackup nowritebackup
+autocmd FileType crontab setlocal nobackup nowritebackup
 
 " golang
 autocmd BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
@@ -19,4 +19,4 @@ let g:python2_host_prog = expand('~/.asdf/shims/python')
 let g:python3_host_prog = expand('~/.asdf/shims/python')
 
 " ruby
-let g:ruby_host_prog    = expand('~/.asdf/shims/ruby')
+let g:ruby_host_prog = expand('~/.asdf/shims/ruby')
