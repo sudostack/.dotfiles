@@ -21,6 +21,7 @@ brew 'newsboat'                   # RSS/Atom feed reader for text terminals
 brew 'nvim'                       # NeoVim
 brew 'pastel'                     # CLI to generate, analyze, convert and manipulate colors
 brew 'ripgrep'                    # Rust implementation of grep (faster than Ag aka the Silver Searcher)
+brew 'sloccount'                  # Count lines of code in many languages
 brew 'tmux'                       # terminal multiplexer
 brew 'tree'                       # display directories as trees
 brew 'universal-ctags/universal-ctags/universal-ctags'
