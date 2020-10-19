@@ -1,13 +1,30 @@
-" iceyberg
-" - source: https://www.reddit.com/r/vim/comments/jdlhbj/what_do_you_think_about_my_color_scheme/
-"
+" iceyberg (adaptation by wulymammoth)
+
 " setup
 hi clear
 syntax clear
 set background=dark
 let g:colors_name='iceyberg'
 
-" palette
+" PALETTE
+"
+" 0:  #22262e : black
+" 1:  #e27878 : coral reef (red)
+" 2:  #b4be82 : lime twist (green)
+" 3:  #e2a478 : myrtle beach (orange)
+" 4:  #84a0c6 : persian violet (blue)
+" 5:  #a093c7 : mighty aphrodite (violet)
+" 6:  #89b8c2 : passion blue
+" 7:  #c6c8d1 : violet mist (gray)
+" 8:  #6b7089 : silhouette (gray)
+" 9:  #e98989 : flamingo's dream (red)
+" 10: #c0ca8e : corn stalk (green)
+" 11: #e9b189 : persian melon (orange)
+" 12: #91acd1 : summer mist (blue)
+" 13: #ada0d3 : heather plum (violet)
+" 14: #95c4ce : blue rapids (blue)
+" 15: #d2d4de : violet dusk (violet)
+" 16: #161821 : trademark black
 let s:colors = {
 	\ -1: 'NONE',
 	\ 0:  '#22262e',
@@ -104,7 +121,7 @@ call s:HL("Boolean",       -1, 11)
 call s:HL("Float",         -1,  5)
 
 call s:HL("Identifier",    -1,  7)
-call s:HL("Function",      -1,  3)
+call s:HL("Function",      -1,  1)
 
 " language constructs
 call s:HL("Comment",       -1,  8)
