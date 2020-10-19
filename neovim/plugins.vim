@@ -1,9 +1,10 @@
 call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'airblade/vim-rooter'
-  Plug 'arcticicestudio/nord-vim'
   Plug 'bling/vim-airline'
+  Plug 'cocopon/iceberg.vim'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'gkeep/iceberg-dark'
   Plug 'godlygeek/tabular'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
   Plug 'junegunn/fzf'
@@ -67,6 +68,7 @@ let g:airline#extensions#tabline#formatter    = 'short_path'
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep     = ' '
 let g:airline_powerline_fonts                 = 1
+let g:airline_theme='icebergDark'
 
 " ----- vim-better-whitespace -----
 let g:better_whitespace_enabled             = 0

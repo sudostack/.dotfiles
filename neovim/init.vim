@@ -6,7 +6,7 @@ source $HOME/.dotfiles/neovim/plugins.vim
 " ----- SETTINGS -----
 autocmd FocusGained * :checktime " check if buffers changed outside of vim - required for `set autoread` and `set autoindent`
 
-colorscheme nord
+colorscheme iceberg
 
 filetype plugin indent on " detection for filetype plugin and indentation
 
