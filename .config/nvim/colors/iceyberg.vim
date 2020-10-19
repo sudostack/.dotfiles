@@ -52,7 +52,7 @@ call s:HL("CursorLine",     0, -1)
 call s:HL("LineNr",        -1,  8)
 call s:HL("CursorLineNr",  -1, 15, 'bold')
 
-" number collumn
+" number column
 call s:HL("CursorColumn",   0, -1)
 call s:HL("FoldedColumn",  -1, -1)
 call s:HL("FoldColumn",    -1,  8)
@@ -81,8 +81,8 @@ call s:HL("MoreMsg",       -1,  4)
 call s:HL("ModeMsg",       -1,  8, 'bold')
 
 " visual aid
-call s:HL("MatchParen",     4,  0)
-call s:HL("Visual",         0, -1)
+call s:HL("MatchParen",    -1, -1)
+call s:HL("Visual",         2,  0)
 call s:HL("VisualNOS",      0, -1)
 call s:HL("NonText",       -1,  8)
 
