@@ -31,7 +31,6 @@ set nojoinspaces             " Prevents insertion of two spaces after punctuatio
 set noswapfile               " Don't make backups before overwriting
 set number                   " Always show line numbers
 set relativenumber           " Always show line numbers
-set rtp+=/usr/local/bin/fzf  " real-time path (For fzf)
 set ruler                    " Show the line and column number of the cursor position
 set shiftround
 set shiftwidth=2             " Indentation amount for < and > commands
