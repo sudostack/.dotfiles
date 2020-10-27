@@ -5,6 +5,7 @@
 brew 'asdf'                       # language version manager (one to rule them all)
 brew 'bat'                        # cat alternative (rust)
 brew 'direnv'                     # manage per-directory environment variables
+brew 'entr'                       # Run arbitrary commands when files change
 brew 'exa'                        # Modern replacement for 'ls'
 brew 'fd'                         # fast alternative to find
 brew 'fzf'                        # command-line fuzzy finder
@@ -22,6 +23,7 @@ brew 'nvim'                       # NeoVim
 brew 'pastel'                     # CLI to generate, analyze, convert and manipulate colors
 brew 'ripgrep'                    # Rust implementation of grep (faster than Ag aka the Silver Searcher)
 brew 'sloccount'                  # Count lines of code in many languages
+brew 'stow'                       # dotfiles linker
 brew 'tmux'                       # terminal multiplexer
 brew 'tree'                       # display directories as trees
 brew 'universal-ctags/universal-ctags/universal-ctags'
