@@ -113,7 +113,7 @@ call s:HL("SpecialKey",    -1,  5)
 call s:HL("Whitespace",    -1,  8)
 
 " variable types
-call s:HL("Constant",      -1, -1)
+call s:HL("Constant",      -1,  1)
 call s:HL("String",        -1,  6)
 call s:HL("Character",     -1,  3)
 call s:HL("Number",        -1,  5)
@@ -194,4 +194,3 @@ call s:HL("htmlArg",       -1, 13)
 " statusline
 call s:HL("Dark",          -1,  8)
 call s:HL("Accent",        -1,  4)
-
