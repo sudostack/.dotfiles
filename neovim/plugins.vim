@@ -109,3 +109,6 @@ inoreabbrev <expr> <bar><bar>
 inoreabbrev <expr> __
           \ <SID>isAtStartOfLine('__') ?
           \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+
+" ----- vimwiki -----
+let g:vimwiki_ext2syntax = {}
