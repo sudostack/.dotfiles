@@ -19,6 +19,7 @@ brew 'koekeishiya/formulae/skhd'  # hotkey daemon for macOS
 brew 'koekeishiya/formulae/yabai' # tiling window manager
 brew 'neofetch'                   # command-line system info tool
 brew 'newsboat'                   # RSS/Atom feed reader for text terminals
+brew 'ngrep'                      # Network grep
 brew 'nvim'                       # NeoVim
 brew 'pastel'                     # CLI to generate, analyze, convert and manipulate colors
 brew 'ripgrep'                    # Rust implementation of grep (faster than Ag aka the Silver Searcher)
