@@ -24,6 +24,7 @@ brew 'nvim'                       # NeoVim
 brew 'pastel'                     # CLI to generate, analyze, convert and manipulate colors
 brew 'ripgrep'                    # Rust implementation of grep (faster than Ag aka the Silver Searcher)
 brew 'sloccount'                  # Count lines of code in many languages
+brew 'starship'                   # Cross-shell prompt for astronauts
 brew 'stow'                       # dotfiles linker
 brew 'tmux'                       # terminal multiplexer
 brew 'tree'                       # display directories as trees
