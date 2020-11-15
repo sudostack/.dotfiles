@@ -1,10 +1,10 @@
 wtf:
   colors:
     border:
-      focusable : darkslateblue
-      focused   : lightskyblue
-      normal    : slategray
-    title: lightsteelblue
+      focusable: white
+      focused:   white
+      normal:    white
+    title: cornflowerblue
   grid:
     columns: [32, 32, 32, 32, 90]
     rows: [12, 9, 9, 9, 4, 90]
@@ -32,11 +32,6 @@ wtf:
     hackernews:
       enabled: true
       numberOfStories: 20
-      colors:
-        border:
-          focusable : slategray
-          focused   : lightskyblue
-          normal    : slategray
       position:
         top: 0
         left: 0
@@ -45,9 +40,6 @@ wtf:
       storyType: top
       refreshInterval: 900
     ipinfo:
-      colors:
-        name: lightblue
-        value: white
       enabled: true
       position:
         top: 3
@@ -103,7 +95,7 @@ wtf:
       cmd: "uptime"
       colors:
         border:
-          focusable: slategray
+          focusable: white
       enabled: true
       position:
         top: 4
