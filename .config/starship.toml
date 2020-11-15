@@ -12,9 +12,6 @@ disabled = true
 [conda]
 symbol = " "
 
-[dart]
-symbol = " "
-
 [docker]
 symbol = " "
 
@@ -63,14 +60,8 @@ symbol = " "
 [php]
 symbol = " "
 
-[python]
-symbol = " "
-
 [ruby]
 symbol = " "
-
-[rust]
-symbol = " "
 
 [swift]
 symbol = "ﯣ "
