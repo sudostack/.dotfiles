@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql'] }
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
   Plug 'scrooloose/nerdcommenter'
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
@@ -71,6 +72,9 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 let g:goyo_height = 100
 let g:goyo_linenr = 1
 let g:goyo_width  = 120
+
+" ----- hexokinase-vim -----
+let g:Hexokinase_highlighters = [ 'virtual' ]
 
 " ----- ripgrep -----
 nmap <Leader>/ :Rg<SPACE>
